@@ -42,7 +42,7 @@
                     </a>
                 </li>
                 <li class="nav nav-tabs" style="padding: 15px;">
-                    <a class="category_btn <?php if ($this->uri->segment(1)=="localtions") {echo "active";} ?>" href="/localtions">
+                    <a class="category_btn <?php if ($this->uri->segment(1)=="locations") {echo "active";} ?>" href="/locations">
                         <p class="text-dark" style="cursor: pointer;">
                             交通圖
                         </p>
