@@ -1,7 +1,7 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
 // Admin
-$route['admin'] = 'dashboard';
+$route['admin'] = 'admin/dashboard';
 $route['admin/access'] = 'dashboard/access';
 $route['admin/update_access'] = 'dashboard/update_access';
 $route['admin/single_access/(:num)'] = 'dashboard/single_access/$1';
@@ -9,6 +9,7 @@ $route['admin/update_single_access/(:num)']= 'dashboard/update_single_access/$1'
 $route['check/session'] = 'dashboard/checkSession';
 $route['setting_general'] = 'dashboard/setting_general';
 $route['update_setting_general'] = 'dashboard/update_setting_general';
+$route['logout'] = 'admin/login/logout';
 
 // 商品分類
 $route['category/(:any)']        = 'posts/category/$1';

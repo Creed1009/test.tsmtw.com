@@ -28,7 +28,6 @@
         <div class="box">
           <div class="box-title hidden-print">
             <h3><?php echo $page_title; ?></h3>
-            <h1>hellow</h1>
           </div>
           <div class="box-content">
             <?php if ($this->session->flashdata('message')) { ?>

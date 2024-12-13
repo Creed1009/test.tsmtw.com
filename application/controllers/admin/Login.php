@@ -167,7 +167,7 @@ class Login extends Public_Controller {
 
 		// redirect them to the login page
 		$this->session->set_flashdata('message', $this->ion_auth->messages());
-		redirect('login', 'refresh');
+		redirect('admin/login', 'refresh');
 	}
 
 	/**
