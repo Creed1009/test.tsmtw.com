@@ -658,19 +658,21 @@
               <!-- Item -->
               
 
-            <div class="flickity-viewport" style="height: 405.188px;"><div class="flickity-slider" style="transform: translateX(-300%);"><div class="w-100 flickity-cell is-selected" style="transform: translateX(300%);">
+            <div class="flickity-viewport" style="height: 405.188px;"><div class="flickity-slider" style="transform: translateX(-300%);">
+              <!-- <div class="w-100 flickity-cell is-selected" style="transform: translateX(300%);">
                 <div class="card bg-h-100 bg-start" style="background-image: url(assets/img/covers/cover-24.jpg);">
                   <div class="row" style="min-height: 400px;">
                     
                     <div class="col-12 col-md-2 col-lg-4 col-xl-6 d-none d-md-block bg-cover" style="background-image: url(assets/img/covers/cover-16.jpg);"></div>
                   </div>
                 </div>
-              </div><div class="w-100 flickity-cell" aria-hidden="true" style="transform: translateX(100%);">
+              </div> 
+              <div class="w-100 flickity-cell" aria-hidden="true" style="transform: translateX(100%);">
                 <div class="card bg-cover" style="background-image: url(assets/img/covers/cover-29.jpg)">
                   <div class="row align-items-center" style="min-height: 400px;">
                     <div class="col-12 col-md-10 col-lg-8 col-xl-6">
-                      <div class="card-body px-md-10 py-11">
-
+                      <div class="card-body px-md-10 py-11">-->
+                        
                         <!-- Heading -->
                         <h4 class="mb-5">Get -50% from Summer Collection</h4>
 
@@ -689,7 +691,8 @@
                     </div>
                   </div>
                 </div>
-              </div><div class="w-100 flickity-cell" aria-hidden="true" style="transform: translateX(200%);">
+              </div> -->
+              <div class="w-100 flickity-cell" aria-hidden="true" style="transform: translateX(200%);">
                 <div class="card bg-cover" style="background-image: url(assets/img/covers/cover-30.jpg);">
                   <div class="row align-items-center" style="min-height: 400px;">
                     <div class="col-12">

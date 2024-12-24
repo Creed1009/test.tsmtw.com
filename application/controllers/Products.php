@@ -1,6 +1,10 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Product extends Public_Controller {
+/**
+ * @property Mysql_model $mysql_model
+ */
+
+class Products extends Public_Controller {
 
     public function __construct()
     {
@@ -10,7 +14,8 @@ class Product extends Public_Controller {
     public function index()
 	{
 		$this->data['page_title'] = '產品服務';
+        $this->data['products'] = $this->mysql_model->_select('pages','page_url', 'product', 'row');
 
-		$this->render('product');
+		$this->render('products');
 	}
 }

@@ -16,6 +16,20 @@
  * @property resizeImage $resizeImage
  * @property server $server
  * @property load $load
+ * @property category $category
+ * @property top_category $top_category
+ * @property sub_category $sub_category
+ * @property product_category_parent $product_category_parent
+ * @property product_category_name $product_category_name
+ * @property product_category_sort $product_category_sort
+ * @property creator_id $creator_id
+ * @property created_at $created_at
+ * @property post_title $post_title
+ * @property post_category $post_category
+ * @property post_status $post_status
+ * @property post_id $post_id
+ * @property getTopCategory $getTopCategory
+ * @property getSubCategory $getSubCategory
  */
 
 
@@ -328,13 +342,11 @@ class Products extends Admin_Controller {
         if ($query->num_rows() > 0) {
             $this->db->truncate('product_category_list');
             foreach($query->result_array() as $product){
-
                 $data = array(
                     'product_id'          => $product['product_id'],
                     'product_category_id' => $product['product_category'],
                 );
                 $this->db->insert('product_category_list', $data);
-
             }
         }
     }
