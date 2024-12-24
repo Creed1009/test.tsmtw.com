@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class product extends Public_Controller {
+class Product extends Public_Controller {
 
     public function __construct()
     {
