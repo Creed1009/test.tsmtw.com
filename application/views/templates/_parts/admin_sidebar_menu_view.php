@@ -31,7 +31,7 @@
     <?php } ?>
     
     <?php if($this->ion_auth->in_group('admin') || $this->ion_auth->in_group('president')){ ?>
-    <li <?php if ($current == "auth" || $current == "users") {echo "class='active'";}?>>
+    <li <?php if ($current == "product" || $current == "users") {echo "class='active'";}?>>
       <a href="#" class="dropdown-toggle">
         <i class="fa fa-user"></i>
         <span>商品管理</span>
@@ -39,8 +39,8 @@
       </a>
       <ul class="submenu">
         <?php if($this->ion_auth->in_group('admin')){ ?>
-        <li <?php if ($current == "auth") {echo 'class="active"';}?>>
-          <a href="/admin/auth">商品列表</a>
+        <li <?php if ($current == "product") {echo 'class="active"';}?>>
+          <a href="/admin/product">商品列表</a>
         </li>
         <?php } ?>
       </ul>

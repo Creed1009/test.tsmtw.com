@@ -1,5 +1,24 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * @property products_model $products_model
+ * @property ajax_pagination_admin $ajax_pagination_admin
+ * @property perPage $perPage
+ * @property mysql_model $mysql_model
+ * @property ion_auth $ion_auth
+ * @property upload $upload
+ * @property image_lib $image_lib
+ * @property session $session
+ * @property db $db
+ * @property input $input
+ * @property form_validation $form_validation
+ * @property render $render
+ * @property resizeImage $resizeImage
+ * @property server $server
+ * @property load $load
+ */
+
+
 class Products extends Admin_Controller {
 
     public function __construct()
