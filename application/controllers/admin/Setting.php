@@ -1,5 +1,17 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * @property Mysql_model $mysql_model
+ * @property Ion_auth $ion_auth
+ * @property Ion_auth_model $ion_auth_model
+ * @property Setting_model $setting_model
+ * @property CI_Form_validation $form_validation
+ * @property CI_Session $session
+ * @property CI_Input $input
+ * @property CI_DB_query_builder $db
+ */
+
+
 class Setting extends Admin_Controller {
 
     public function __construct()

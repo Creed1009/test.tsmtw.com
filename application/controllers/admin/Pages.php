@@ -1,5 +1,17 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * @property pages_model $pages_model
+ * @property perPage $perPage
+ * @property ajax_pagination_admin $ajax_pagination_admin
+ * @property input $input
+ * @property session $session
+ * @property ion_auth $ion_auth
+ * @property mysql_model $mysql_model
+ * @property db $db
+ */
+
+
 class Pages extends Admin_Controller {
 
     public function __construct()
