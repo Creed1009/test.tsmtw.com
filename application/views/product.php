@@ -272,17 +272,13 @@
               <div class="col-12">
               </div>
             </div>
-
             <!-- Products -->
             <div class="row">
               <div class="col-6 col-md-4">
-
                 <!-- Card -->
                 <div class="card mb-7">
-
                   <!-- Image -->
                   <div class="card-img">
-
                     <!-- Image -->
                     <a class="card-img-hover" href="product.html">
                       <img class="card-img-top card-img-back" src="assets/img/products/product-01.jpg" alt="...">
@@ -319,28 +315,22 @@
                         Leather mid-heel Sandals
                       </a>
                     </div>
-
                     <!-- Price -->
                     <div class="fw-bold text-muted">
                       $129.00
                     </div>
-
                   </div>
-
                 </div>
-
               </div>
               <div class="col-6 col-md-4">
-
                 <!-- Card -->
                 <div class="card mb-7">
-
                   <!-- Image -->
                   <div class="card-img">
 
                     <!-- Image -->
                     <a class="card-img-hover" href="product.html">
-                      <img class="card-img-top card-img-back" src="assets/img/products/product-121.jpg" alt="...">
+                      <img class="card-img-top card-img-back" src="assets/img/products/product-01.jpg" alt="...">
                       <img class="card-img-top card-img-front" src="assets/img/products/product-6.jpg" alt="...">
                     </a>
 
