@@ -4,7 +4,7 @@
  * @property Mysql_model $mysql_model
  */
 
-class Products extends Public_Controller {
+class Products_model extends Public_Controller {
 
     public function __construct()
     {

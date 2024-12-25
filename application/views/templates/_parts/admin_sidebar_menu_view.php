@@ -40,7 +40,7 @@
       <ul class="submenu">
         <?php if($this->ion_auth->in_group('admin')){ ?>
         <li <?php if ($current == "products") {echo 'class="active"';}?>>
-          <a href="/admin/product">商品列表</a>
+          <a href="/admin/products">商品列表</a>
         </li>
         <?php } ?>
       </ul>

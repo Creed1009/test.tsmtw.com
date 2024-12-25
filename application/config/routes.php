@@ -18,7 +18,7 @@ $route['posts/(:any)']           = 'posts/view/$1';
 $route['/']                      = 'home';
 $route['about']                  = 'about';
 $route['contact']                = 'contact';
-$route['product']                = 'product';
+$route['products']               = 'products';
 $route['news']                   = 'news';
 // 其他
 $route['admin/export/users']     = 'admin/export/users';
