@@ -54,7 +54,6 @@
                           <a class="list-styled-link" data-bs-toggle="collapse" href="#jumpersCollapse">
                             Jumpers and Cardigans
                           </a>
-
                           <!-- Collapse -->
                           <div class="collapse" id="jumpersCollapse" data-bs-parent="#productsNav">
                             <div class="py-4 ps-5">
@@ -84,15 +83,12 @@
                               </div>
                             </div>
                           </div>
-
                         </li>
                         <li class="list-styled-item">
-
                           <!-- Toggle -->
                           <a class="list-styled-link" data-bs-toggle="collapse" href="#legginsCollapse">
                             Leggings
                           </a>
-
                           <!-- Collapse -->
                           <div class="collapse" id="legginsCollapse" data-bs-parent="#productsNav">
                             <div class="py-4 ps-5">
@@ -128,122 +124,7 @@
                     </div>
                   </div>
 
-                </li>
-                <li class="nav-item">
-                  <!-- Toggle -->
-                  <a class="nav-link dropdown-toggle fs-lg text-reset border-bottom mb-6" data-bs-toggle="collapse" href="#colorCollapse">
-                    Color
-                  </a>
-
-                  <!-- Collapse -->
-                  <div class="collapse" id="colorCollapse" data-simplebar-collapse="#colorGroup">
-                    <div class="form-group form-group-overflow mb-6" id="colorGroup">
-                      <div class="form-check form-check-color mb-3">
-                        <input class="form-check-input" id="colorOne" type="checkbox" style="background-color: black">
-                        <label class="form-check-label text-body" for="colorOne">
-                          Black
-                        </label>
-                      </div>
-                      <div class="form-check form-check-color mb-3">
-                        <input class="form-check-input" id="colorTwo" type="checkbox" style="background-color: #f9f9f9;" checked="">
-                        <label class="form-check-label text-body" for="colorTwo">
-                          White
-                        </label>
-                      </div>
-                      <div class="form-check form-check-color mb-3">
-                        <input class="form-check-input" id="colorThree" type="checkbox" style="background-color: #3b86ff">
-                        <label class="form-check-label text-body" for="colorThree">
-                          Blue
-                        </label>
-                      </div>
-                      <div class="form-check form-check-color mb-3">
-                        <input class="form-check-input" id="colorFour" type="checkbox" style="background-color: #ff6f61">
-                        <label class="form-check-label text-body" for="colorFour">
-                          Red
-                        </label>
-                      </div>
-                      <div class="form-check form-check-color mb-3">
-                        <input class="form-check-input" id="colorFive" type="checkbox" style="background-color: #795548" disabled="">
-                        <label class="form-check-label text-body" for="colorFive">
-                          Brown
-                        </label>
-                      </div>
-                      <div class="form-check form-check-color mb-3">
-                        <input class="form-check-input" id="colorSix" type="checkbox" style="background-color: #bababa">
-                        <label class="form-check-label text-body" for="colorSix">
-                          Gray
-                        </label>
-                      </div>
-                      <div class="form-check form-check-color mb-3">
-                        <input class="form-check-input" id="colorSeven" type="checkbox" style="background-color: #17a2b8;">
-                        <label class="form-check-label text-body" for="colorSeven">
-                          Cyan
-                        </label>
-                      </div>
-                      <div class="form-check form-check-color">
-                        <input class="form-check-input" id="colorEight" type="checkbox" style="background-color: #e83e8c;">
-                        <label class="form-check-label text-body" for="colorEight">
-                          Pink
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-
-                </li>
-                <li class="nav-item">
-                  <!-- Toggle -->
-                  <a class="nav-link dropdown-toggle fs-lg text-reset border-bottom mb-6" data-bs-toggle="collapse" href="#priceCollapse">
-                    Price
-                  </a>
-
-                  <!-- Collapse -->
-                  <div class="collapse" id="priceCollapse" data-simplebar-collapse="#priceGroup">
-
-                    <!-- Form group-->
-                    <div class="form-group form-group-overflow mb-6" id="priceGroup">
-                      <div class="form-check mb-3">
-                        <input class="form-check-input" id="priceOne" type="checkbox" checked="">
-                        <label class="form-check-label" for="priceOne">
-                          $10.00 - $49.00
-                        </label>
-                      </div>
-                      <div class="form-check mb-3">
-                        <input class="form-check-input" id="priceTwo" type="checkbox" checked="">
-                        <label class="form-check-label" for="priceTwo">
-                          $50.00 - $99.00
-                        </label>
-                      </div>
-                      <div class="form-check mb-3">
-                        <input class="form-check-input" id="priceThree" type="checkbox">
-                        <label class="form-check-label" for="priceThree">
-                          $100.00 - $199.00
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" id="priceFour" type="checkbox">
-                        <label class="form-check-label" for="priceFour">
-                          $200.00 and Up
-                        </label>
-                      </div>
-                    </div>
-
-                    <!-- Range -->
-                    <div class="d-flex align-items-center">
-
-                      <!-- Input -->
-                      <input type="number" class="form-control form-control-xs" placeholder="$10.00" min="10">
-
-                      <!-- Divider -->
-                      <div class="text-gray-350 mx-2">‒</div>
-
-                      <!-- Input -->
-                      <input type="number" class="form-control form-control-xs" placeholder="$350.00" max="350">
-
-                    </div>
-
-                  </div>
-
-                </li>
+                </li>                 
               </ul>
             </form>
 

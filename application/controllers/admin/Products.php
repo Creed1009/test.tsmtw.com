@@ -28,8 +28,9 @@
  * @property post_category $post_category
  * @property post_status $post_status
  * @property post_id $post_id
- * @property getTopCategory $getTopCategory
+ * @property getTOPCategory $getTOPCategory
  * @property getSubCategory $getSubCategory
+ * 
  */
 
 
@@ -77,7 +78,7 @@ class Products extends Admin_Controller {
         $sortBy = $this->input->get('sortBy');
         $category = $this->input->get('category');
         // $status = $this->input->get('status');
-        if(!empty($keywords)){
+        if(!empty($keywords)){ 
             $conditions['search']['keywords'] = $keywords;
         }
         if(!empty($sortBy)){
@@ -278,11 +279,15 @@ class Products extends Admin_Controller {
 
     public function category()
     {
+        $query = $this->db->get('top_category');
+
         $this->data['page_title'] = '商品分類';
         $this->data['category'] = $this->products_model->getTopCategory();
         $this->data['sub_category'] = $this->products_model->getSubCategory();
 
         $this->render('admin/products/category/index');
+        
+        return $query->result_array();
     }
 
     public function insert_category()

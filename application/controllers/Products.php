@@ -9,6 +9,7 @@ class Products_model extends Public_Controller {
     public function __construct()
     {
         parent::__construct();
+        $this->load->model('products_model');
     }
 
     public function index()
