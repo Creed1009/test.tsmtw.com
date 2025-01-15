@@ -37,9 +37,9 @@ class Products_model extends CI_Model {
         //return fetched data
         return ($query->num_rows() > 0)?$query->result_array():FALSE;
     }
-    function getAvailableProducts($params = array()){
+    function getPosts($params = array()){
         $this->db->select('*');
-        $this->db->from('products');
+        $this->db->from('posts');
         //filter data by searched keywords
         // if(!empty($params['search']['keywords'])){
         //     $this->db->like('post_title',$params['search']['keywords']);

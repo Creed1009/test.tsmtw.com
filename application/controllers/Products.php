@@ -5,7 +5,7 @@
  * @property view $view
  */
 
-class Products extends CI_Controller {
+class Products extends Public_Controller {
 
     public function __construct()
     {
@@ -18,7 +18,6 @@ class Products extends CI_Controller {
 		$this->data['page_title'] = '產品服務';
         $this->data['products'] = $this->products_model->getAllProducts();
         // $this->data['products'] = $this->mysql_model->_select('pages','page_url', 'product', 'row');
-        $this->load->view('products', $this->data);
-        // $this->render('products'); // Removed undefined method call
+        $this->render('products'); 
 	}
 }
