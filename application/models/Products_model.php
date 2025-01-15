@@ -6,7 +6,7 @@ class Products_model extends CI_Model {
         parent::__construct();
     }
 
-    function getRows($params = array()){
+    function getAllProducts($params = array()){
         $this->db->select('*');
         $this->db->from('products');
         //filter data by searched keywords
@@ -37,9 +37,9 @@ class Products_model extends CI_Model {
         //return fetched data
         return ($query->num_rows() > 0)?$query->result_array():FALSE;
     }
-    function getPosts($params = array()){
+    function getAvailableProducts($params = array()){
         $this->db->select('*');
-        $this->db->from('posts');
+        $this->db->from('products');
         //filter data by searched keywords
         // if(!empty($params['search']['keywords'])){
         //     $this->db->like('post_title',$params['search']['keywords']);
