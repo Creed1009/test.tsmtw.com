@@ -5,7 +5,7 @@
 <style>
     .col-12 col-md-4 col-lg-3 {
         width: 250px;
-        background-color: #f4f4f4; /* 側邊欄背景色 */
+        background-color: rgb(253, 252, 162); /* 側邊欄背景色 */
         padding: 15px;
         border-right: 1px solid #ddd;
     }
@@ -20,11 +20,32 @@
     }
 
     .col-12 col-md-4 col-lg-3-list li {
+        height: 300px;
         padding: 10px;
-        background-color: #fff;
-        border: 1px solid #ddd;
+        background-color:rgb(216, 188, 188);
+        border: 1px solid rgb(190, 209, 216);
         border-radius: 5px;
-        text-align: left;
+    }
+    .card.wb-7 {
+        height: 300px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .card-img {
+      height: 250px;
+      overflow: hidden;
+    }
+    .card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .card-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 </style>
 
@@ -164,7 +185,7 @@
                       <div class="card-img">
                         <!-- Image -->
                         <div class="All product_image">
-                          <img src="<?php echo $product['product_image1'] ?>" alt="<?php echo $product['product_image1'] ?>" class="card-img-top">   
+                          <img src="/assets/uploads/<?php echo $product['product_image1'] ?>" alt="<?php echo $product['product_title'] ?>" class="card-img-top">   
                         </div>
                         <!-- <a class="card-img-hover" href="product.html">
                           <img class="card-img-top card-img-back" src="assets/img/products/product-01.jpg" alt="...">
@@ -202,6 +223,15 @@
                     <svg class="svg-inline--fa fa-caret-left" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" data-fa-i2svg=""><path fill="currentColor" d="M137.4 406.6l-128-127.1C3.125 272.4 0 264.2 0 255.1s3.125-16.38 9.375-22.63l128-127.1c9.156-9.156 22.91-11.9 34.88-6.943S192 115.1 192 128v255.1c0 12.94-7.781 24.62-19.75 29.58S146.5 415.8 137.4 406.6z"></path></svg><!-- <i class="fa fa-caret-left"></i> Font Awesome fontawesome.com -->
                   </a>
                 </li>
+                
+                <?php $start_page = max(1, $current_page - 2);
+                $end_page = min($total_pages, $current_page = 2);
+
+                // for($i = 1; $)
+
+                ?>
+
+                </li>
                 <li class="page-item active">
                   <a class="page-link" href="#">1</a>
                 </li>
@@ -227,7 +257,7 @@
                 </li>
               </ul>
             </nav>
-
+            
           </div>
         </div>
       </div>
