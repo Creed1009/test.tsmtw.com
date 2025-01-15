@@ -1,12 +1,11 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * @property Mysql_model $mysql_model
  * @property data $data
  * @property view $view
  */
 
-class Products_model extends CI_Controller {
+class Products extends CI_Controller {
 
     public function __construct()
     {
@@ -17,8 +16,9 @@ class Products_model extends CI_Controller {
     public function index()
 	{
 		$this->data['page_title'] = '產品服務';
-        $this->data['products'] = $this->mysql_model->_select('pages','page_url', 'product', 'row');
-        $this->load->view('product', $this->data);
-		// $this->render('products');
+        $this->data['products'] = $this->products_model->getAllProducts();
+        // $this->data['products'] = $this->mysql_model->_select('pages','page_url', 'product', 'row');
+        $this->load->view('products', $this->data);
+        // $this->render('products'); // Removed undefined method call
 	}
 }

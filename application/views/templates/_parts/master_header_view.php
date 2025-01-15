@@ -45,7 +45,7 @@
       <a class="navbar-logo-header" href="/">
         <img src="/assets/images/tacc_header.png" alt="home">
       </a>
-      <div class="collapse navbar-collapse" id="navbarsExample03">
+      <div class="collapse navbar-collapse" id="navbarExample03">
         <ul class="navbar-nav me-auto mb-2 mb-sm-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/">Home</a>
@@ -57,7 +57,7 @@
             <a class="nav-link contact" href="contact">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link product" href="product">products</a>
+            <a class="nav-link products" href="products">products</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">portfolio</a>
