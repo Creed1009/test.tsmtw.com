@@ -82,26 +82,8 @@
 
       <div class="col-12 col-md-8 col-lg-9">
 
-        <!-- Slider -->
-        <div class="flickity-page-dots-inner mb-9 flickity-enabled is-draggable" data-flickity="{&quot;pageDots&quot;: true}" tabindex="0">
-          <div class="flickity-viewport" style="height: 50px;">
-            <div class="flickity-slider" style="transform: translateX(-300%);">
-              <div class="w-100 flickity-cell is-selected" style="transform: translateX(300%);"></div>
-                <div class="flickity-page-dots"><button type="button" class="flickity-page-dot is-selected" aria-current="step">View slide 1</button><button type="button" class="flickity-page-dot">View slide 2</button><button type="button" class="flickity-page-dot">View slide 3</button>
-                </div>
-                <div class="w-100 flickity-cell" aria-hidden="true" style="transform: translateX(100%);">
-                  <div class="card bg-cover" style="background-image: url(assets/img/covers/cover-29.jpg)"></div>
-                </div>
-                <div class="w-100 flickity-cell" aria-hidden="true" style="transform: translateX(200%);">
-                  <div class="card bg-cover" style="background-image: url(assets/img/covers/cover-30.jpg);"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         <!-- Tags -->
-          <div class="row mb-7">
+        <div class="row mb-7">
             <div class="col-12"></div>
           </div>
         <!-- Products -->
@@ -187,7 +169,29 @@
             </li>
           </ul>
         </nav>
+
+        <!-- Slider
+        <div class="flickity-page-dots-inner mb-9 flickity-enabled is-draggable" data-flickity="{&quot;pageDots&quot;: true}" tabindex="0">
+          <div class="flickity-viewport" style="height: 50px;">
+            <div class="flickity-slider" style="transform: translateX(-300%);">
+              <div class="w-100 flickity-cell is-selected" style="transform: translateX(300%);"></div>
+                <div class="flickity-page-dots"><button type="button" class="flickity-page-dot is-selected" aria-current="step">View slide 1</button><button type="button" class="flickity-page-dot">View slide 2</button><button type="button" class="flickity-page-dot">View slide 3</button>
+                </div>
+                <div class="w-100 flickity-cell" aria-hidden="true" style="transform: translateX(100%);">
+                  <div class="card bg-cover" style="background-image: url(assets/img/covers/cover-29.jpg)"></div>
+                </div>
+                <div class="w-100 flickity-cell" aria-hidden="true" style="transform: translateX(200%);">
+                  <div class="card bg-cover" style="background-image: url(assets/img/covers/cover-30.jpg);"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      
+        --------
         
+        
+
       </div>
       
     </div>

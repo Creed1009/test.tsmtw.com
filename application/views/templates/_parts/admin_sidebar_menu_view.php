@@ -47,6 +47,16 @@
     </li>
     <?php } ?>
 
+    <?php if($this->ion_auth->in_group('admin') || $this->ion_auth->in_group('president')){ ?>
+      <li <?php if ($current == "about" || $current == "users") {echo "class='active'";}?>>
+        <a href="#" class="dropdown-toggle">
+          <i class="fa fa-user"></i>
+          <span>關於我們</span>
+          <b class="arrow fa fa-angle-right"></b>
+        </a>
+      </li>
+    <?php } ?>
+
     <?php if($this->ion_auth->in_group('admin')){ ?>
     <li class="<?php if (($current == "setting")) {echo "active";}?>">
       <a href="/admin/setting/general">
