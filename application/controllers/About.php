@@ -17,7 +17,8 @@ class About extends Public_Controller {
 	{
 		$this->data['page_title'] = '關於我們';
 		$this->data['banner'] = $this->mysql_model->_select('pages','page_url', 'about', 'row');
-		$this->data['about_contact'] = $this->mysql_model->_select('pages','page_url', 'about_contact', 'row');
+		$this->data['about_contact'] = $this->mysql_model->_select('pages','page_url', 'page_contact', 'row');
+		// $this->data['about_contact'] = $this->mysql_model->_select('pages','page_url', 'about_contact', 'row');
 		$this->render('about');
 		// $this->load->view('about', $this->data);
 	}
