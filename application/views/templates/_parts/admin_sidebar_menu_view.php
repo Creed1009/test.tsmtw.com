@@ -4,20 +4,11 @@
 <div id="sidebar" class="navbar-collapse collapse sidebar-fixed">
   <!-- BEGIN Navlist -->
   <ul class="nav nav-list hidden-print">
-    <?php if($this->ion_auth->in_group('admin') || $this->ion_auth->in_group('post_manager')){ ?>
-    <li class="<?php if (($current == "posts")) {echo "class='active'";}?>">
-      <a href="/admin/posts">
-        <i class="fa fa-clipboard"></i>
-        <span>公告欄管理</span>
-      </a>
-    </li>
-    <?php } ?>
-
     <?php if($this->ion_auth->in_group('admin') || $this->ion_auth->in_group('president')){ ?>
       <li class="<?php if ($current == "banner" || $current == "users") {echo "active";}?>">
         <a href="/admin/banner" >
           <i class="fa fa-user"></i>
-          <span>首頁</span>
+          <span>首頁管理</span>
         </a>
       </li>
     <?php } ?>
@@ -48,13 +39,13 @@
       </li>
     <?php } ?>
 
-    <?php if($this->ion_auth->in_group('admin') || $this->ion_auth->in_group('president')){ ?>
-      <li <?php if ($current == "about" || $current == "users") {echo "active";}?>>
-        <a href="/admin/pages" >
-          <i class="fa fa-user"></i>
-          <span>文章</span>
-        </a>
-      </li>
+    <?php if($this->ion_auth->in_group('admin') || $this->ion_auth->in_group('post_manager')){ ?>
+    <li class="<?php if (($current == "posts")) {echo "class='active'";}?>">
+      <a href="/admin/posts">
+        <i class="fa fa-clipboard"></i>
+        <span>文章管理</span>
+      </a>
+    </li>
     <?php } ?>
 
     <?php if($this->ion_auth->in_group('admin') || $this->ion_auth->in_group('president')){ ?>

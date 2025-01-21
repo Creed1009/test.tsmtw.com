@@ -103,14 +103,7 @@
     </div>
 </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h1>關於我們</h1>
-            <p>我們是一群熱愛生活的人，希望透過我們的努力，讓更多人認識我們的產品，並且喜歡我們的產品。</p>
-        </div>
-    </div>
-</div>
+
 
 
 
