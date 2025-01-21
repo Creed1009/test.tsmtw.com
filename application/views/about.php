@@ -1,12 +1,18 @@
 <style>
     .jumbotron {
-        padding: 2rem 1rem;
-        margin-bottom: 2rem;
-        background-color:rgb(55, 107, 158);
-        /* border-radius: .3rem;  */
-        width: 100%;
-        height: 400px;
-    }
+    margin-bottom: 0;
+    padding: 0;
+    position: relative;
+}
+
+.display-1 {
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.display-4 {
+    letter-spacing: 1px;
+}
 </style>
 
 <!-- <?php if(!empty($banner)) { ?>
@@ -15,29 +21,38 @@
 
 
 <main role="main">
-
-<!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-        <div class="container">
-            <h1 class="display-3">Hello, world!</h1>
-            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+    <div class="jumbotron jumbotron-fluid text-white" style="height: 100vh; background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/asset/images/tacc_images/aboutus_top_pic.jpg') no-repeat center center; background-size: cover;">
+        <div class="container h-100 d-flex flex-column justify-content-center">
+            <h1 class="display-1">ABOUT US</h1>
+            <h2 class="display-4">TACC DESIGN STUDIO</h2>
         </div>
     </div>
 </main>
-
 <div class="container">
-    <div class="row">
-        <div class="col-md-8 mx-auto">
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="" alt="">
-                </div>
-                <div class="col-md-8">
-                    <h1>關於我們</h1>
-                    <p>我們是一群熱愛生活的人，希望透過我們的努力，讓更多人認識我們的產品，並且喜歡我們的產品。</p>
-                </div>
+    <div class="row align-items-center my-5">
+            <div class="col-md-6">
+                <img src="/assets/images/tacc_images/aboutus_pic_01.jpg" class="img-fluid" alt="設計圖">
             </div>
-        </div>
+            <div class="col-md-6" style="line-height: 1.3; font-size: 14px;">
+                <h2>太工創作設計</h2>
+                太工創作設計專注於住宅與商業空間的整合設計，<br>
+                堅持以溫度與創意為核心，結合建築本質，<br>
+                為客戶帶來嶄新的空間體驗。<br><br>
+
+                我們擅長將不同材質、結構與功能融合，化解工程難題，<br>
+                創造實用且美觀的設計方案，<br>
+                致力於突破業界的界限。<br><br>
+
+                多年來，憑藉創新的設計理念與專業的執行能力，<br>
+                太工創作設計深受業主與合作夥伴的信賴與推崇，<br>
+                成為眾多粉絲心中的優質品牌。<br><br>
+
+                每一個太工的作品都蘊藏著獨特的創意，量身打造、不可複製，<br>
+                為客戶實現他們的夢想空間。<br><br>
+
+                我們相信設計不僅是功能與美學的結合，<br>
+                更是一種對生活方式的詮釋。期待與您一同創造令人驚豔的作品！
+            </div>
     </div>
 
 </div>

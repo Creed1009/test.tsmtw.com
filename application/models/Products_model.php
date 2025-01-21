@@ -6,7 +6,7 @@ class Products_model extends CI_Model {
         parent::__construct();
     }
 
-    function getRows($params = array()){
+    function getAllProducts($params = array()){
         $this->db->select('*');
         $this->db->from('products');
         //filter data by searched keywords

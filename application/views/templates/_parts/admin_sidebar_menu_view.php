@@ -5,7 +5,7 @@
   <!-- BEGIN Navlist -->
   <ul class="nav nav-list hidden-print">
     <?php if($this->ion_auth->in_group('admin') || $this->ion_auth->in_group('post_manager')){ ?>
-    <li class="<?php if (($current == "posts")) {echo "active";}?>">
+    <li class="<?php if (($current == "posts")) {echo "class='active'";}?>">
       <a href="/admin/posts">
         <i class="fa fa-clipboard"></i>
         <span>公告欄管理</span>
@@ -14,20 +14,12 @@
     <?php } ?>
 
     <?php if($this->ion_auth->in_group('admin') || $this->ion_auth->in_group('president')){ ?>
-    <li <?php if ($current == "auth" || $current == "users") {echo "class='active'";}?>>
-      <a href="#" class="dropdown-toggle">
-        <i class="fa fa-user"></i>
-        <span>帳號管理</span>
-        <b class="arrow fa fa-angle-right"></b>
-      </a>
-      <ul class="submenu">
-        <?php if($this->ion_auth->in_group('admin')){ ?>
-        <li <?php if ($current == "auth") {echo 'class="active"';}?>>
-          <a href="/admin/auth">系統管理員</a>
-        </li>
-        <?php } ?>
-      </ul>
-    </li>
+      <li class="<?php if ($current == "banner" || $current == "users") {echo "active";}?>">
+        <a href="/admin/banner" >
+          <i class="fa fa-user"></i>
+          <span>首頁</span>
+        </a>
+      </li>
     <?php } ?>
     
     <?php if($this->ion_auth->in_group('admin') || $this->ion_auth->in_group('president')){ ?>
@@ -48,20 +40,38 @@
     <?php } ?>
 
     <?php if($this->ion_auth->in_group('admin') || $this->ion_auth->in_group('president')){ ?>
-      <li <?php if ($current == "about" || $current == "users") {echo "class='active'";}?>>
-        <a href="#" class="dropdown-toggle">
+      <li <?php if ($current == "about" || $current == "users") {echo "active";}?>>
+        <a href="/admin/pages" >
           <i class="fa fa-user"></i>
           <span>關於我們</span>
-          <b class="arrow fa fa-angle-right"></b>
         </a>
-        <ul class="submenu">
+      </li>
+    <?php } ?>
+
+    <?php if($this->ion_auth->in_group('admin') || $this->ion_auth->in_group('president')){ ?>
+      <li <?php if ($current == "about" || $current == "users") {echo "active";}?>>
+        <a href="/admin/pages" >
+          <i class="fa fa-user"></i>
+          <span>文章</span>
+        </a>
+      </li>
+    <?php } ?>
+
+    <?php if($this->ion_auth->in_group('admin') || $this->ion_auth->in_group('president')){ ?>
+    <li <?php if ($current == "auth" || $current == "users") {echo "class='active'";}?>>
+      <a href="#" class="dropdown-toggle">
+        <i class="fa fa-user"></i>
+        <span>帳號管理</span>
+        <b class="arrow fa fa-angle-right"></b>
+      </a>
+      <ul class="submenu">
         <?php if($this->ion_auth->in_group('admin')){ ?>
-        <li <?php if ($current == "pages") {echo 'class="active"';}?>>
-          <a href="/admin/pages">商品列表</a>
+        <li <?php if ($current == "auth") {echo 'class="active"';}?>>
+          <a href="/admin/auth">系統管理員</a>
         </li>
         <?php } ?>
       </ul>
-      </li>
+    </li>
     <?php } ?>
 
     <?php if($this->ion_auth->in_group('admin')){ ?>
