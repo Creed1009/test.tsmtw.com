@@ -54,6 +54,13 @@
           <span>關於我們</span>
           <b class="arrow fa fa-angle-right"></b>
         </a>
+        <ul class="submenu">
+        <?php if($this->ion_auth->in_group('admin')){ ?>
+        <li <?php if ($current == "pages") {echo 'class="active"';}?>>
+          <a href="/admin/pages">商品列表</a>
+        </li>
+        <?php } ?>
+      </ul>
       </li>
     <?php } ?>
 
