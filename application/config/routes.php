@@ -20,6 +20,8 @@ $route['about']                  = 'about';
 $route['contact']                = 'contact';
 $route['products']               = 'products';
 $route['news']                   = 'news';
+$route['contact']                = 'contact/index';
+$route['contact/insert']         = 'contact/insert';
 // 其他
 $route['admin/export/users']     = 'admin/export/users';
 $route['backup_db']              = 'others/backup_db';

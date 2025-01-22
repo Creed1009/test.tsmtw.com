@@ -18,7 +18,7 @@
 <?php } ?>
 <div class="container-fluid">
     <div class="card-body position-relative z-2 py-5">
-        <form class="mx-auto" style="max-width: 800px;">
+        <form action="https://test.tsmtw.com/contact/insert" class="mx-auto" style="max-width: 800px;">
             <h2 class="h1 card-title text-center pb-4">聯絡我們</h2>
             <div class="row g-4">
                 <div class="col-sm-6">

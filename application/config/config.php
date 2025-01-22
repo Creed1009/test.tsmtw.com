@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-//$config['base_url'] = 'http://erp.localhost/';
+$config['base_url'] = 'https://test.tsmtw.com/';
 // 允許多筆通過的網域
 $allowed_domains = ['localhost', 'nshstu.localhost'];
 
