@@ -16,7 +16,7 @@ class Products extends Public_Controller {
     public function index()
 	{
 		$this->data['page_title'] = '產品服務';
-        $this->data['products'] = $this->products_model->getAllProducts();
+        $this->data['products'] = $this->products_model->getRows();
         // $this->data['products'] = $this->mysql_model->_select('pages','page_url', 'product', 'row');
         $this->render('products'); 
 	}
