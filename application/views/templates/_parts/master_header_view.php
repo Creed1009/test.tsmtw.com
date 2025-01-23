@@ -68,6 +68,9 @@
               <li><a class="dropdown-item" href="#">細部展演4</a></li>
             </ul>
           </li>
+          <li class="nav-item">
+            <a class="nav-link posts" href="posts">News</a>
+          </li>
         </ul>
         <form>
           <input class="form-control" type="text" placeholder="Search" aria-label="Search">

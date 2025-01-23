@@ -19,7 +19,8 @@ $route['/']                      = 'home';
 $route['about']                  = 'about';
 $route['contact']                = 'contact';
 $route['products']               = 'products';
-$route['news']                   = 'news';
+$route['posts']                  = 'posts';
+$route['posts']                  = 'posts/index';
 $route['contact']                = 'contact/index';
 $route['contact/insert']         = 'contact/insert';
 // 其他
