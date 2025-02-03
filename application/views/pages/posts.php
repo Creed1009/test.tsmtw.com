@@ -12,8 +12,8 @@
                             <h2><?php echo $post['post_title']; ?></h2>
                             <p>
                                 <?php 
-                                    $preview = substr($post['post_content'], 0, 100); 
-                                    echo htmlspecialchars($preview) . '...';
+                                    $preview = substr($post['post_content'], 0, 300); 
+                                    echo strip_tags($preview) . '...';
                                 ?>
                             </p>
                             <a href="/posts/view/<?php echo $post['post_id']; ?>" class="btn btn-primary">
