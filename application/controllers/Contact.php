@@ -11,7 +11,7 @@ class Contact extends Public_Controller {
 	{
 		$this->data['page_title'] = '聯絡我們';
 
-		$this->render('contact');
+		$this->render('pages/contact');
 	}
 
     // public function insert()

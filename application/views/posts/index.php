@@ -5,6 +5,24 @@
     <div class="container">
         <div class="row">
             <!-- Posts -->
+
+            <div class="col-md-2" style="padding-top: 20px; padding-bottom: 00px; background: #E6E6E6;">
+            <ul style="padding: 0px;">
+                <li class="nav nav-tabs" style="padding: 15px;">
+                    <p class="category_btn" id="category_btn_0" onclick="setcategory(0);searchFilter()" style="cursor: pointer;">
+                        最新消息
+                    </p>
+                </li>
+                <?php if(!empty($post_category)) { foreach($post_category as $pc) { ?>
+                <li class="nav nav-tabs" style="padding: 15px;">
+                    <p class="category_btn" id="category_btn_<?php echo $pc['post_category_id'] ?>" onclick="setcategory(<?php echo $pc['post_category_id'] ?>);searchFilter()" style="cursor: pointer;">
+                        <?php echo $pc['post_category_name'] ?>
+                    </p>
+                </li>
+                <?php }} ?>
+            </ul>
+        </div>
+
             <div class="col-12 col-md-8 col-lg-9">
                 <?php if (!empty($posts)) { ?>
                     <?php foreach ($posts as $post) { ?>

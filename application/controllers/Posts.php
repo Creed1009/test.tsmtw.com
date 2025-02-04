@@ -13,7 +13,7 @@ class Posts extends Public_Controller {
 
         $this->data['posts'] = $this->mysql_model->_select('posts');
 
-		$this->render('posts');
+		$this->render('posts/index');
     }
 
     public function view($id)
@@ -27,8 +27,10 @@ class Posts extends Public_Controller {
             show_404();
         }
 
+        $this->data['post_category'] = $this->mysql_model->_select('post_category' );
 
-        $this->render('posts_detail');
+
+        $this->render('posts/view');
     }
 
 }

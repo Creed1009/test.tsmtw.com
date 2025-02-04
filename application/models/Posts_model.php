@@ -5,6 +5,16 @@ class Posts_model extends CI_Model {
     function __construct() {
         parent::__construct();
     }
+    // get all categories
+    public function get_categories() {
+        return $this ->db->get('post_category')->result_array();
+    }
+
+    public function get_new_by_category($category) {
+        $this->db->where('post_category', $category);
+        return $this->db->get('posts')->result_array();
+    }
+
 
     function getRows($params = array()){
         $this->db->select('*');

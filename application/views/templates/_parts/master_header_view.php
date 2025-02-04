@@ -51,13 +51,13 @@
             <a class="nav-link active" aria-current="page" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link about" href="about">About</a>
+            <a class="nav-link about" href="/about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link contact" href="contact">Contact</a>
+            <a class="nav-link contact" href="/contact">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link products" href="products">products</a>
+            <a class="nav-link products" href="/products">products</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">portfolio</a>
@@ -69,7 +69,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link posts" href="posts">News</a>
+            <a class="nav-link posts" href="/posts">News</a>
           </li>
         </ul>
         <form>

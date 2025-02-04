@@ -19,9 +19,9 @@ $route['/']                      = 'home';
 $route['about']                  = 'about';
 $route['contact']                = 'contact';
 $route['products']               = 'products';
-$route['posts']                  = 'posts';
+//$route['posts']                  = 'posts';
 $route['posts']                  = 'posts/index';
-$route['contact']                = 'contact/index';
+//$route['contact']                = 'contact/index';
 $route['contact/insert']         = 'contact/insert';
 // 其他
 $route['admin/export/users']     = 'admin/export/users';
@@ -30,8 +30,8 @@ $route['backup_db']              = 'others/backup_db';
 //////////////////////////////////////////////////////////////////////////////////////
 
 $route['sitemap\.xml']           = "Sitemap/index";
-// $route['(.+)']                = "page";
-// $route['(:any)']                 = "pages";
+// $route['(.+)']                  = "page";
+// $route['(:any)']                = "pages";
 $route['default_controller']     = 'home';
 $route['404_override']           = '';
 $route['translate_uri_dashes']   = TRUE;
