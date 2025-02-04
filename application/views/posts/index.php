@@ -6,11 +6,41 @@
         <div class="row">
             <!-- Posts -->
 
-            <div class="col-md-2" style="padding-top: 20px; padding-bottom: 00px; background: #E6E6E6;">
+            <div class="col-md-2" style="padding-top: 20px; padding-bottom: 30px; background: #E6E6E6;">
             <ul style="padding: 0px;">
                 <li class="nav nav-tabs" style="padding: 15px;">
                     <p class="category_btn" id="category_btn_0" onclick="setcategory(0);searchFilter()" style="cursor: pointer;">
                         最新消息
+                    </p>
+                </li>
+                <li class="nav nav-tabs" style="padding: 15px;">
+                    <p class="category_btn" id="category_btn_2" onclick="setcategory(2);searchFilter()" style="cursor: pointer;">
+                        教師專業
+                    </p>
+                </li>
+                <li class="nav nav-tabs" style="padding: 15px;">
+                    <p class="category_btn" id="category_btn_3" onclick="setcategory(3);searchFilter()" style="cursor: pointer;">
+                        新聞及法規
+                    </p>
+                </li>
+                <li class="nav nav-tabs" style="padding: 15px;">
+                    <p class="category_btn" id="category_btn_5" onclick="setcategory(5);searchFilter()" style="cursor: pointer;">
+                        會務訊息
+                    </p>
+                </li>
+                <li class="nav nav-tabs" style="padding: 15px;">
+                    <p class="category_btn" id="category_btn_6" onclick="setcategory(6);searchFilter()" style="cursor: pointer;">
+                        工作報告
+                    </p>
+                </li>
+                <li class="nav nav-tabs" style="padding: 15px;">
+                    <p class="category_btn" id="category_btn_7" onclick="setcategory(7);searchFilter()" style="cursor: pointer;">
+                        法規專區
+                    </p>
+                </li>
+                <li class="nav nav-tabs" style="padding: 15px;">
+                    <p class="category_btn" id="category_btn_8" onclick="setcategory(8);searchFilter()" style="cursor: pointer;">
+                        其他
                     </p>
                 </li>
                 <?php if(!empty($post_category)) { foreach($post_category as $pc) { ?>
