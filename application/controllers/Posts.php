@@ -5,6 +5,7 @@ class Posts extends Public_Controller {
     public function __construct()
     {
         parent::__construct();
+        $this->load->model('Posts_model');
     }
 
     public function index()
@@ -33,4 +34,13 @@ class Posts extends Public_Controller {
         $this->render('posts/view');
     }
 
+    public function filter() 
+    {
+        $category_id = $this->input->get('category');
+    
+        $this->load->model('Posts_model');
+        $data['posts'] = $this->mysql_model->_select($category_id);
+    
+        $this->load->view('posts/post_list', $data); // 回傳過濾後的文章
+    }
 }

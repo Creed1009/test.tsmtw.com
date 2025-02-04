@@ -1,5 +1,14 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * Class Auth
+ * @property input $input
+ * @property session $session
+ * @property check_is_block_list $check_is_block_list
+ * @property check_is_bad_guy $check_is_bad_guy
+ * @property post $post
+ */
+
 class Contact extends Public_Controller {
 
     public function __construct()
@@ -34,6 +43,7 @@ class Contact extends Public_Controller {
         } else {
             $this->session->set_flashdata('message', '請勿重複提交表單！');
             redirect($_SERVER['HTTP_REFERER']);
+            }
         }
     }
 
