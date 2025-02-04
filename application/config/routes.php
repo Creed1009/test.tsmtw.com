@@ -21,6 +21,7 @@ $route['contact']                = 'contact';
 $route['products']               = 'products';
 //$route['posts']                  = 'posts';
 $route['posts']                  = 'posts/index';
+$route['posts/filter']           = 'posts/filter';
 //$route['contact']                = 'contact/index';
 $route['contact/insert']         = 'contact/insert';
 // 其他

@@ -10,37 +10,37 @@
             <ul style="padding: 0px;">
                 <li class="nav nav-tabs" style="padding: 15px;">
                     <p class="category_btn" id="category_btn_0" onclick="setcategory(0);searchFilter()" style="cursor: pointer;">
-                        最新消息
+                        <a href="/posts?category=0">最新消息</a>
                     </p>
                 </li>
                 <li class="nav nav-tabs" style="padding: 15px;">
                     <p class="category_btn" id="category_btn_2" onclick="setcategory(2);searchFilter()" style="cursor: pointer;">
-                        教師專業
+                        <a href="/posts?category=2">教師專業</a>
                     </p>
                 </li>
                 <li class="nav nav-tabs" style="padding: 15px;">
                     <p class="category_btn" id="category_btn_3" onclick="setcategory(3);searchFilter()" style="cursor: pointer;">
-                        新聞及法規
+                        <a href="/posts?category=3">新聞及法規</a>
                     </p>
                 </li>
                 <li class="nav nav-tabs" style="padding: 15px;">
                     <p class="category_btn" id="category_btn_5" onclick="setcategory(5);searchFilter()" style="cursor: pointer;">
-                        會務訊息
+                        <a href="/posts?category=5">會務訊息</a>
                     </p>
                 </li>
                 <li class="nav nav-tabs" style="padding: 15px;">
                     <p class="category_btn" id="category_btn_6" onclick="setcategory(6);searchFilter()" style="cursor: pointer;">
-                        工作報告
+                        <a href="/posts?category=6">工作報告</a>
                     </p>
                 </li>
                 <li class="nav nav-tabs" style="padding: 15px;">
                     <p class="category_btn" id="category_btn_7" onclick="setcategory(7);searchFilter()" style="cursor: pointer;">
-                        法規專區
+                        <a href="/posts?category=7">法規專區</a>
                     </p>
                 </li>
                 <li class="nav nav-tabs" style="padding: 15px;">
                     <p class="category_btn" id="category_btn_8" onclick="setcategory(8);searchFilter()" style="cursor: pointer;">
-                        其他
+                        <a href="/posts?category=8">其他</a>
                     </p>
                 </li>
                 <?php if(!empty($post_category)) { foreach($post_category as $pc) { ?>
@@ -88,27 +88,27 @@
 <input type="hidden" id="category" value="0">
 <script>
     function setcategory(value){
-        $('#category').val(value);
-        $('.category_btn').removeClass('active');
-        $('#category_btn_'+value).addClass('active');
+        // $('#category').val(value);
+        // $('.category_btn').removeClass('active');
+        // $('#category_btn_'+value).addClass('active');
 
-        searchFilter();
+        // searchFilter();
     }
 
     function searchFilter(){
-        var category_id = $('category').val();
-        console.log("過濾分類", category_id);
+        // var category_id = $('category').val();
+        // console.log("過濾分類", category_id);
 
-        $.ajax({
-            type: "GET",
-            url: "/posts/filter",
-            data: { category: category_id },
-            success: function(response){
-                $(".col-12.col-.col-lg-9").html(response);
-            },
-            error: function(){
-                console.log("Error loading posts.");
-            }
-        });
+        // $.ajax({
+        //     type: "GET",
+        //     url: "/posts/filter",
+        //     data: { category: category_id },
+        //     success: function(response){
+        //         $(".col-12.col-.col-lg-9").html(response);
+        //     },
+        //     error: function(){
+        //         console.log("Error loading posts.");
+        //     }
+        // });
     }
 </script>

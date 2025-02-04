@@ -85,10 +85,12 @@ class Posts_model extends CI_Model {
         return ($query->num_rows() > 0)?$query->result_array():FALSE;
     }
     //new
+
     public function getPostsByCategory($category_id) {
-        $this->db->where('post_category_id', $category_id);
+        if($category_id>0){
+            $this->db->where('post_category', $category_id);
+        }
         return $this->db->get('posts')->result_array();
     }
-    
 
 }
