@@ -13,7 +13,7 @@
                         最新消息
                     </p>
                 </li>
-                <li class="nav nav-tabs" style="padding: 15px;">
+                <!-- <li class="nav nav-tabs" style="padding: 15px;">
                     <p class="category_btn" id="category_btn_2" onclick="setcategory(2);searchFilter()" style="cursor: pointer;">
                         教師專業
                     </p>
@@ -42,7 +42,7 @@
                     <p class="category_btn" id="category_btn_8" onclick="setcategory(8);searchFilter()" style="cursor: pointer;">
                         其他
                     </p>
-                </li>
+                </li> -->
                 <?php if(!empty($post_category)) { foreach($post_category as $pc) { ?>
                 <li class="nav nav-tabs" style="padding: 15px;">
                     <p class="category_btn" id="category_btn_<?php echo $pc['post_category_id'] ?>" onclick="setcategory(<?php echo $pc['post_category_id'] ?>);searchFilter()" style="cursor: pointer;">
