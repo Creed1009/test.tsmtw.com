@@ -60,7 +60,7 @@
                             <h2><?php echo $post['post_title']; ?></h2>
                             <p>
                                 <?php 
-                                    $preview = substr($post['post_content'], 0, 300); 
+                                    $preview = substr($post['post_content'], 0, 300);
                                     echo strip_tags($preview) . '...';
                                 ?>
                             </p>

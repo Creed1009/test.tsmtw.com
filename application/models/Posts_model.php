@@ -86,7 +86,8 @@ class Posts_model extends CI_Model {
     }
     //new
 
-    public function getPostsByCategory($category_id) {
+    public function getPostsByCategory($category_id)
+    {
         if($category_id>0){
             $this->db->where('post_category', $category_id);
         }

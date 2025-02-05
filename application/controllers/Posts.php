@@ -1,12 +1,15 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * @property Posts_model $Posts_model
+ */
+
 class Posts extends Public_Controller {
 
     public function __construct()
     {
         parent::__construct();
         $this->load->model('Posts_model');
-        $this->Posts_model = $this->Posts_model;
     }
 
     public function index()
