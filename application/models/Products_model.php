@@ -6,6 +6,38 @@ class Products_model extends CI_Model {
         parent::__construct();
     }
 
+    function getRowsCount($params = array()){
+        $this->db->select('*');
+        $this->db->from('products');
+        //filter data by searched keywords
+        if(!empty($params['search']['keywords'])){
+            $this->db->like('product_title',$params['search']['keywords']);
+        }
+        if(!empty($params['search']['category'])){
+            $this->db->where('product_category',$params['search']['category']);
+        }
+        // if(!empty($params['search']['status'])){
+        //     $this->db->where('post_status',$params['search']['status']);
+        // } else {
+        //     $this->db->where('post_status', '1');
+        // }
+        if(!empty($params['search']['sortBy'])){
+            $this->db->order_by('product_id',$params['search']['sortBy']);
+        } else {
+            $this->db->order_by('product_id','desc');
+        }
+        //set start and limit
+        // if(array_key_exists("start",$params) && array_key_exists("limit",$params)){
+        //     $this->db->limit($params['limit'],$params['start']);
+        // }elseif(!array_key_exists("start",$params) && array_key_exists("limit",$params)){
+        //     $this->db->limit($params['limit']);
+        // }
+        //get posts
+        $query = $this->db->get();
+        //return fetched data
+        return $query->num_rows();
+    }
+
     function getRows($params = array()){
         $this->db->select('*');
         $this->db->from('products');
@@ -72,6 +104,26 @@ class Products_model extends CI_Model {
         $query = $this->db->get();
         //return fetched data
         return ($query->num_rows() > 0)?$query->result_array():FALSE;
+    }
+
+    public function getTopCategory()
+    
+    {
+
+        $query = $this->db->get('top_category');
+
+        return $query->result_array();
+
+    }
+
+    public function getSubCategory()
+
+    {
+
+        $query = $this->db->get('sub_category');
+
+        return $query->result_array();
+
     }
 
 }

@@ -28,9 +28,8 @@
  * @property post_category $post_category
  * @property post_status $post_status
  * @property post_id $post_id
- * @property getTOPCategory $getTOPCategory
  * @property getSubCategory $getSubCategory
- * 
+ * @property getTopCategory $getTopCategory
  */
 
 
@@ -90,8 +89,13 @@ class Products extends Admin_Controller {
         // if(!empty($status)){
         //     $conditions['search']['status'] = $status;
         // }
+
         //total rows count
-        $totalRec = count($this->products_model->getRows($conditions));
+        $totalRec = $this->products_model->getRowsCount($conditions);
+
+        // $result = $this->products_model->getRows($conditions);
+        // $totalRec = is_array($result) ? count($result) : 0;
+
         //pagination configuration
         $config['target']      = '#datatable';
         $config['base_url']    = base_url().'admin/products/ajaxData';
@@ -112,18 +116,49 @@ class Products extends Admin_Controller {
     {
         $this->data['page_title'] = '新增商品';
         $this->data['category'] = $this->mysql_model->_select('product_category');
+
+        if ($this->input->post()) {
+            $data = array(
+                'product_title'  => $this->input->post('product_title'),
+                'product_category' => implode(',', $this->input->post('product_category')),
+                'product_content' => $this->input->post('product_content'),
+                'product_sort' => $this->input->post('product_sort'),
+                // 'product_title_en'  => $this->input->post('product_title_en'),
+                'product_description'  => $this->input->post('product_description'),
+                // 'product_description_en'  => $this->input->post('product_description_en'),
+                'product_price' => $this->input->post('product_price'),
+                'creator_id'   => $this->session->userdata('user_id'),
+                'created_at'   => date('Y-m-d H:i:s'),
+            );
+
+            $insert_id = $this->mysql_model->_insert('products', $data);
+
+            if ($insert_id) {
+                $this->session->set_flashdata('message', '商品建立成功！');
+                redirect('admin/products');
+            } else {
+                $this->session->set_flashdata('error', '商品建立失敗！');
+            }
+        }
+
         $this->render('admin/products/create');
     }
 
     public function insert()
     {
         $data = array(
-            'product_name'           => $this->input->post('product_name'),
-            'product_name_en'        => $this->input->post('product_name_en'),
-            'product_description'    => $this->input->post('product_description'),
-            'product_description_en' => $this->input->post('product_description_en'),
-            'creator_id'             => $this->ion_auth->user()->row()->id,
-            'created_at'             => date('Y-m-d H:i:s'),
+            'product_title'  => $this->input->post('product_title'),
+            'product_category' => implode(',', $this->input->post('product_category')),
+            'product_content' => $this->input->post('product_content'),
+            'product_sort' => $this->input->post('product_sort'),
+            // 'product_title_en'  => $this->input->post('product_title_en'),
+            'product_description'  => $this->input->post('product_description'),
+            'product_on_the_shelf' => $this->input->post('product_on_the_shelf'),
+            'product_off_the_shelf' => $this->input->post('product_off_the_shelf'),
+            // 'product_description_en'  => $this->input->post('product_description_en'),
+            'product_price' => $this->input->post('product_price'),
+            'creator_id'   => $this->ion_auth->user()->row()->id,
+            'created_at'   => date('Y-m-d H:i:s'),
         );
         $id = $this->mysql_model->_insert('products',$data);
 
@@ -162,12 +197,17 @@ class Products extends Admin_Controller {
     public function update($id)
     {
         $data = array(
-            'product_name'           => $this->input->post('product_name'),
-            'product_name_en'        => $this->input->post('product_name_en'),
-            'product_description'    => $this->input->post('product_description'),
-            'product_description_en' => $this->input->post('product_description_en'),
-            'updater_id'             => $this->ion_auth->user()->row()->id,
-            'updated_at'             => date('Y-m-d H:i:s'),
+            'product_title'  => $this->input->post('product_title'),
+            'product_category' => implode(',', $this->input->post('product_category')),
+            'product_content' => $this->input->post('product_content'),
+            // 'product_title_en'  => $this->input->post('product_title_en'),
+            'product_description'  => $this->input->post('product_description'),
+            'product_on_the_shelf' => $this->input->post('product_on_the_shelf'),
+            'product_off_the_shelf' => $this->input->post('product_off_the_shelf'),
+            // 'product_description_en'  => $this->input->post('product_description_en'),
+            'product_price' => $this->input->post('product_price'),
+            'updater_id'  => $this->ion_auth->user()->row()->id,
+            'updated_at'  => date('Y-m-d H:i:s'),
         );
         $this->db->where('product_id', $id);
         $this->db->update('products', $data);
