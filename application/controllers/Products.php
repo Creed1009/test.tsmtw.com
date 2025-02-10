@@ -21,7 +21,22 @@ class Products extends Public_Controller {
         $this->render('pages/products'); 
 	}
 
-    public function product($id)
+    // public function product($id)
+    // {
+    //     $this->data['page_title'] = '產品服務'; // set pag
+
+    //     $this->data['product'] = $this->products_model->getRows($id);
+
+    //     if (empty($this->data['product'])) {
+
+    //         show_404();
+    //     }
+
+    //     $this->data['product_category'] = $this->products_model->getRows();
+    //     $this->render('pages/product');
+    // }
+
+    public function view($id)
     {
         $this->data['page_title'] = '產品服務'; // set pag
 
@@ -33,8 +48,6 @@ class Products extends Public_Controller {
         }
 
         $this->data['product_category'] = $this->products_model->getRows();
-        $this->render('pages/product');
-    }
-
-    
+        $this->render('pages/products');
+    }    
 }

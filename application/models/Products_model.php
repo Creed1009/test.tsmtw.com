@@ -69,6 +69,7 @@ class Products_model extends CI_Model {
         //return fetched data
         return ($query->num_rows() > 0)?$query->result_array():FALSE;
     }
+    
     function getPosts($params = array()){
         $this->db->select('*');
         $this->db->from('posts');

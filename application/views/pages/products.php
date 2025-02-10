@@ -112,7 +112,7 @@
                     </div>
                     <!-- Title -->
                     <div class="fw-bold">
-                      <a class="text-body" href="product.html">
+                      <a class="text-body" href="<?= base_url('products/'.$product['product_id']) ?>">
                         <?php echo $product['product_title'] ?>
                       </a>
                     </div>
@@ -136,8 +136,10 @@
               </a>
             </li>
             
-            <?php $start_page = max(1, $current_page - 2);
-            $end_page = min($total_pages, $current_page = 2);
+            <?php
+            $current_page = isset($current_page) ? $current_page : 1;
+            $start_page = max(1, $current_page - 2);
+            $end_page = min($total_pages, $current_page + 2);
 
             // for($i = 1; $)
 
