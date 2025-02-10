@@ -69,7 +69,7 @@ class Products_model extends CI_Model {
         //return fetched data
         return ($query->num_rows() > 0)?$query->result_array():FALSE;
     }
-    
+
     function getPosts($params = array()){
         $this->db->select('*');
         $this->db->from('posts');
@@ -127,4 +127,18 @@ class Products_model extends CI_Model {
 
     }
 
+    public function getTotalRows()
+
+    {
+        return $this->db->count_all('products');
+    }
+
+        public function getLimitedRows($limit = null, $offset = null)
+    {
+        if($limit && $offset){
+            $this->db->limit($limit, $offset);
+        }
+        $query = $this->db->get('products');
+        return $query->result();
+    }
 }
