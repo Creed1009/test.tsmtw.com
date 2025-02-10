@@ -136,10 +136,37 @@ class Posts extends Admin_Controller {
             'created_at'         => date('Y-m-d H:i:s'),
         );
 
-        $this->mysql_model->_insert('posts',$data);
+        $post_id = $this->mysql_model->_insert('posts',$data);
+
+        $this->inset_category($post_id);
+        $this->inset_tag($post_id);
 
         $this->session->set_flashdata('message', '公告欄建立成功！');
         redirect( base_url() . 'admin/posts');
+    }
+
+    public function inset_category($post_id)
+    {
+        $data = array(
+            'post_id'         => $post_id,
+            'post_category_id' => $this->input->post('post_category'),
+        );
+
+        $this->db->insert('post_category_list', $data);
+    }
+
+    public function inset_tag($post_id)
+    {
+        $tag = $this->input->post('tag');
+        if (!empty($tag)) {
+            foreach ($tag as $tag_id) {
+                $data = array(
+                    'post_id' => $post_id,
+                    'tag_id'  => $tag_id,
+                );
+                $this->db->insert('post_tag_list', $data);
+            }
+        }
     }
 
     public function edit($id)

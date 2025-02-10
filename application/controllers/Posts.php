@@ -18,6 +18,8 @@ class Posts extends Public_Controller {
 
         // $this->data['posts'] = $this->mysql_model->_select('posts');
         $this->data['posts'] = $this->Posts_model->getPostsByCategory($this->input->get('category'));
+        print_r($this->data['posts']);
+        exit;
 
 		$this->render('posts/index');
     }
