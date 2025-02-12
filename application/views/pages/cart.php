@@ -1,3 +1,7 @@
+<?php if(!empty($banner['page_banner'])){ ?>
+    <img src="/assets/uploads/<?php echo $banner['page_banner'] ?>" class="img-fluid">
+<?php } ?>
+
 <section class="h-100">
     <div class="container h-100 py-5">
         <div class="row d-flex justify-content-center align-items-center h-100">

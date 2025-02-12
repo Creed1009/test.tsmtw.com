@@ -139,6 +139,30 @@ class Products_model extends CI_Model {
             $this->db->limit($limit, $offset);
         }
         $query = $this->db->get('products');
-        return $query->result();
+        return $query->result_array();
+    }
+
+    public function getProductById($id)
+
+    {
+
+        $query = $this->db->get_where('products', array('product_id' => $id));
+
+        return $query->row_array();
+
+    }
+
+    public function getCategoryByProductId($id)
+
+    {
+
+        // Add your logic to get the category by product ID
+
+        $this->db->where('product_id', $id);
+
+        $query = $this->db->get('products');
+
+        return $query->result_array();
+
     }
 }

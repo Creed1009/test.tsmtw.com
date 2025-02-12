@@ -19,7 +19,7 @@ class Cart extends CI_Controller {
 
     public function index()
     {
-        $this->load->view('cart_view');
+        $this->load->view('pages/cart');
     }
 
     public function add() 
