@@ -19,6 +19,12 @@ class Cart_model extends CI_Model {
         );
         $this->db->insert('cart', $data);        
     }
+
+    public function get_product($id) {
+        $this->db->where('product_id', $id);
+        $query = $this->db->get('products');
+        return $query->row_array();
+    }
 }
 
 ?>

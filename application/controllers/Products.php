@@ -54,9 +54,11 @@ class Products extends Public_Controller {
         $this->data['page_title'] = '商品詳細資料'; // set pag
 
         // $this->data['product'] = $this->products_model->getRows($id);
-        $this->data['productS'] = $this->products_model->getProductById($id);
+        $this->data['products'] = $this->products_model->getProductById($id);
 
-        if (empty($this->data['product'])) {
+        // var_dump($this->data['products']);
+
+        if (empty($this->data['products'])) {
 
             show_404();
         }

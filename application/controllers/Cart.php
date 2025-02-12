@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /**
  * @property data $data
  * @property view $view
+ * @property Cart_model $Cart_model
  * 
  */
 
@@ -22,17 +23,18 @@ class Cart extends CI_Controller {
         $this->load->view('pages/cart');
     }
 
-    public function add() 
+    public function add($id) 
     {
+        $product = $this->Cart_model->get_product($id);
         $data = array(
-            'id'    => $this->input->post('product_id'),
-            'name'  => $this->input->post('product_name'),
-            'price' => $this->input->post('price'),
-            'qty'   => $this->input->post('qty')
+            'id'    => $product['product_id'],
+            'name'  => $product['product_id'],
+            'price' => $product['product_price'],
+            'qty'   => 1
         );
 
         $this->cart->insert($data);
-        redirect('cart');
+        redirect($_SERVER['HTTP_REFERER']);
     }
 
     public function remove($rowid) 
