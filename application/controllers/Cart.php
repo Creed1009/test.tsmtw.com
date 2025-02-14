@@ -9,32 +9,35 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 
 
-class Cart extends CI_Controller {
+class Cart extends Public_Controller {
     
     public function __construct() 
     {
         parent::__construct();
-        $this->load->library('cart');
-        $this->load->model('cart_model');
     }
 
     public function index()
     {
-        $this->load->view('pages/cart');
+        $this->data['page_title'] = '購物車';
+        // $this->load->view('pages/cart', $this->data);
+        $this->render('pages/cart');
     }
 
-    public function add($id) 
+    public function add(int $id) 
     {
-        $product = $this->Cart_model->get_product($id);
+        $product = $this->mysql_model->_select('products', 'product_id', $id, 'row');
         $data = array(
             'id'    => $product['product_id'],
-            'name'  => $product['product_id'],
+            'name'  => $product['product_title'],
             'price' => $product['product_price'],
-            'qty'   => 1
+            'qty'   => 1,
+            // 'options' => array(
+            //     'image' => $product['product_image'],
+            // )
         );
 
         $this->cart->insert($data);
-        redirect($_SERVER['HTTP_REFERER']);
+        // redirect($_SERVER['HTTP_REFERER']);
     }
 
     public function remove($rowid) 
@@ -52,6 +55,7 @@ class Cart extends CI_Controller {
     $thi->cart->destroy();
     redirect('cart');
     }
+
 
 }
 
