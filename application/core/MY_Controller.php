@@ -6,6 +6,7 @@ class MY_Controller extends CI_Controller
 	function __construct()
 	{
 		parent::__construct();
+		$this->load->library('cart');
 		$this->load->library('ion_auth');
 		$this->load->helper('custom');
 		$this->load->model('mysql_model');
@@ -15,20 +16,26 @@ class MY_Controller extends CI_Controller
 
 	protected function render($the_view = NULL, $template = 'master')
 	{
-		if($template == 'json' || $this->input->is_ajax_request())
+		if ($the_view !== NULL) 
 		{
-			header('Content-Type: application/json');
-			echo json_encode($this->data);
-		}
-		elseif(is_null($template))
-		{
-			$this->load->view($the_view,$this->data);
+			// 使用 TRUE 參數來取得視圖內容而不是直接輸出
+			$this->data['the_view_content'] = $this->load->view($the_view, $this->data, TRUE);
+		// if($template == 'json' || $this->input->is_ajax_request())
+		// {
+		// 	header('Content-Type: application/json');
+		// 	echo json_encode($this->data);
+		// }
+		// elseif(is_null($template))
+		// {
+		// 	$this->load->view($the_view,$this->data);
 		}
 		else
 		{
-			$this->data['the_view_content'] = (is_null($the_view)) ? '' : $this->load->view($the_view, $this->data, TRUE);
-			$this->load->view('templates/' . $template . '_view', $this->data);
+			// $this->data['the_view_content'] = (is_null($the_view)) ? '' : $this->load->view($the_view, $this->data, TRUE);
+			// $this->load->view('templates/' . $template . '_view', $this->data);
+			$this->data['the_view_content'] = '';
 		}
+		$this->load->view('templates/' . $template . '_view', $this->data);
 	}
 }
 
