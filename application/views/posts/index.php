@@ -1,5 +1,6 @@
-<h1>News</h1>
-
+<?php if(!empty($banner['page_banner'])){ ?>
+    <img src="/assets/uploads/<?php echo $banner['page_banner'] ?>" class="img-fluid">
+<?php } ?>
 
 <section class="posts-12">
     <div class="container">

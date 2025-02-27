@@ -21,6 +21,7 @@ $route['contact']                = 'contact';
 $route['products']               = 'products';
 $route['products/(:num)']        = 'products/view/$1';
 //$route['posts']                  = 'posts';
+$route['posts/update/(:num)']    = 'posts/update/$1';
 $route['posts']                  = 'posts/index';
 $route['posts/filter']           = 'posts/filter';
 //$route['contact']                = 'contact/index';

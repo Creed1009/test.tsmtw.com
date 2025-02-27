@@ -23,12 +23,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'https://testalloy.tsmtw.com/';
+$config['base_url'] = 'test.tsmtw.com';
 // 允許多筆通過的網域
 $allowed_domains = ['localhost', 'nshstu.localhost'];
 
 // 當偵測到非上述的例外狀況，會被導向到的網域
-$default_domain  = 'testalloy.tsmtw.com';
+$default_domain  = 'test.tsmtw.com';
 
 if (in_array($_SERVER['HTTP_HOST'], $allowed_domains, TRUE))
 {

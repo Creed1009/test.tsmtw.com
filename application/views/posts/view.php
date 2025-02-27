@@ -1,3 +1,8 @@
+<?php if (!empty($banner['page_banner'])) { ?>
+    <img src="/assets/uploads/<?php echo $banner['page_banner'] ?>" class="img-fluid">
+<?php } ?>
+
+
 <div class="container">
     <div class="row">
         <div class="col-md-12">

@@ -68,7 +68,7 @@
     <style>
         .carousel-inner
         .carousel-item {
-            height: 350px;
+            height: 925px;
             margin-bottom: 50px;
         }
         .carousel-caption {
