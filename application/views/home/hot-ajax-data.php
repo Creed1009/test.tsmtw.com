@@ -24,7 +24,7 @@
                                     <?php echo $product['product_description'] ?>
                                 </small>
                             </p>
-                           <?php if($product['product_price']!=0){ ?>
+                            <?php if($product['product_price']!=0){ ?>
                             <p style="margin-bottom: 0px;">
                                 <small style="color: #333;">
                                     原價 NT$ <?php echo number_format($product['product_price']) ?>

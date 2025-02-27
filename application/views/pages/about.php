@@ -13,25 +13,89 @@
 .display-4 {
     letter-spacing: 1px;
 }
+
+.marquee {
+    width: 100%;
+    background-color: white;
+    white-space: nowrap;
+    font-size: 16px;
+    line-height: 40px;
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee-content {
+    display: flex;
+    white-space: nowrap;
+    animation: marquee 15s linear infinite;
+    min-width: 200%;
+}
+
+@keyframes marquee {
+    from {
+        transform: translate(0%);
+    }
+
+    to {
+        transform: translate(-50%);
+    }
+}
+
+.banner {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url('/assets/images/about_banner_02.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.banner h1 {
+    text-align: left;
+    font-size: 3rem;
+}
+
+.banner h2 {
+    text-align: left;
+    font-size: 2rem;
+}
+
 </style>
 
 <!-- <?php if(!empty($banner)) { ?>
     <?php echo $banner['page_content'] ?>
 <?php } ?> -->
 
-
 <main role="main">
-    <div class="jumbotron jumbotron-fluid text-white" style="height: 100vh; background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/asset/images/tacc_images/aboutus_top_pic.jpg') no-repeat center center; background-size: cover;">
-        <div class="container h-100 d-flex flex-column justify-content-center">
+    <div class="jumbotron jumbotron-fluid text-white banner">
+        <div class="container h-100 d-flex flex-column justify-content-center text-center">
             <h1 class="display-1">ABOUT US</h1>
             <h2 class="display-4">TACC DESIGN STUDIO</h2>
         </div>
     </div>
 </main>
+
+<div class="marquee">
+    <div class="marquee-content">
+        <span> About us content &nbsp; About us content &nbsp; About us content &nbsp; About us content &nbsp;</span>
+        <span> About us content &nbsp; About us content &nbsp; About us content &nbsp; About us content &nbsp;</span>
+        <span> About us content &nbsp; About us content &nbsp; About us content &nbsp; About us content &nbsp;</span>
+        <span> About us content &nbsp; About us content &nbsp; About us content &nbsp; About us content &nbsp;</span>
+        <span> About us content &nbsp; About us content &nbsp; About us content &nbsp; About us content &nbsp;</span>
+        <span> About us content &nbsp; About us content &nbsp; About us content &nbsp; About us content &nbsp;</span>
+        <span> About us content &nbsp; About us content &nbsp; About us content &nbsp; About us content &nbsp;</span>
+        <span> About us content &nbsp; About us content &nbsp; About us content &nbsp; About us content &nbsp;</span>
+    </div>
+</div>
+
 <div class="container">
     <div class="row align-items-center my-5">
             <div class="col-md-6">
-                <img src="/assets/images/tacc_images/aboutus_pic_01.jpg" class="img-fluid" alt="設計圖">
+                <img src="/assets/images/about_banner_01.jpg" class="img-fluid" alt="Responsive image" height="100%">
             </div>
             <div class="col-md-6" style="line-height: 1.3; font-size: 14px;">
                 <h2>太工創作設計</h2>
