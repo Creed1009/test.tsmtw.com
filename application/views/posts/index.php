@@ -1,6 +1,9 @@
-<?php if(!empty($banner['page_banner'])){ ?>
-    <img src="/assets/uploads/<?php echo $banner['page_banner'] ?>" class="img-fluid">
-<?php } ?>
+
+<style>
+    .row {
+        margin-top: 50px;
+    }
+</style>
 
 <section class="posts-12">
     <div class="container">

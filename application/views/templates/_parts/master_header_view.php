@@ -59,15 +59,6 @@
           <li class="nav-item">
             <a class="nav-link products" href="/products">products</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">portfolio</a>
-            <ul class="dropdown-menu" aria-labelledby="dropdown03">
-              <li><a class="dropdown-item" href="#">個性住宅1</a></li>
-              <li><a class="dropdown-item" href="#">商業空間2</a></li>
-              <li><a class="dropdown-item" href="#">建築改造3</a></li>
-              <li><a class="dropdown-item" href="#">細部展演4</a></li>
-            </ul>
-          </li>
           <li class="nav-item">
             <a class="nav-link posts" href="/posts">News</a>
           </li>
