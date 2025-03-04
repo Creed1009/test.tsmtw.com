@@ -39,7 +39,6 @@ class Cart extends Public_Controller {
         $this->cart->insert($data);
         // redirect($_SERVER['HTTP_REFERER']);
     }
-
     public function remove($rowid) 
     {
         $this->cart->destroy();
@@ -52,10 +51,13 @@ class Cart extends Public_Controller {
         foreach ($cart_items as $item) {
             $this->Cart_model->save_item($item);
         }
-    $thi->cart->destroy();
+    $this->cart->destroy();
     redirect('cart');
     }
-
+    public function checkout()
+    {
+        $this->load->view('checkout');
+    }
 
 }
 
