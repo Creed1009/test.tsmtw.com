@@ -1,14 +1,6 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-/**
- * @property data $data
- * @property view $view
- * @property Cart_model $Cart_model
- * 
- */
-
-
 class Cart extends Public_Controller {
     
     public function __construct() 
