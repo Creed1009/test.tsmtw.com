@@ -82,7 +82,7 @@ class Cart extends Public_Controller {
                 'quantity' => $item['qty'],
                 'price' => $item['price'],
             );
-            $this=>Order_model->insert_order_item($order_item);
+            $this->Order_model->insert_order_item($order_item);
         }
 
         // 清空購物車
@@ -90,11 +90,5 @@ class Cart extends Public_Controller {
 
         // 跳轉到成功頁面
         redirect('order/success/'.$order_id);
-
-    
-
-
-
+    }
 }
-
-?>
