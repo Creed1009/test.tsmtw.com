@@ -46,7 +46,7 @@
                     <div class="card">
                         <div class="card-body text-center">
                             <h4>Total: $<?php echo number_format($this->cart->total(), 2); ?></h4>
-                            <a href="<?php echo site_url('checkout'); ?>" class="btn btn-warning btn-lg">確認付款</a>
+                            <a href="<?php echo site_url('cart/checkout'); ?>" class="btn btn-warning btn-lg">確認付款</a>
                         </div>
                     </div>
 

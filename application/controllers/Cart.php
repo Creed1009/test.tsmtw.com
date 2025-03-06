@@ -48,8 +48,52 @@ class Cart extends Public_Controller {
     }
     public function checkout()
     {
-        $this->load->view('checkout');
-    }
+        $this->data['page_title'] = '結帳';
+        $this->render('pages/checkout');
+
+        // 取得購物車內容
+        $cart_items = $this->cart->contents();
+
+        if (empty($cart_items)) {
+            $this->session->set_flashdata('error','購物車是空的，無法結帳');
+            redirect('cart');
+        }
+        // 準備訂單數據
+        $order_data = array(
+            'user_id' => $this->session->userdata['user_id'],
+            'total_price' => $this->cart->total(),
+            'status' => 'pending',
+            'created_at' => date('Y-m-d H:i:s'),
+        );
+
+        // 插入訂單主表(order)
+        $order_id = $this->Order_moder->create_order($order_data);
+
+        if (!$order_id) {
+            $this->session->set_flashdata('error', '訂單創建失敗');
+            redirect('cart');
+        }
+
+        // 插入訂單詳表
+        foreach ($cart_items as $item) {
+            $order_item = array(
+                'order_id' => $order_id,
+                'product_id' => $item['id'],
+                'quantity' => $item['qty'],
+                'price' => $item['price'],
+            );
+            $this=>Order_model->insert_order_item($order_item);
+        }
+
+        // 清空購物車
+        $this->cart->destroy();
+
+        // 跳轉到成功頁面
+        redirect('order/success/'.$order_id);
+
+    
+
+
 
 }
 

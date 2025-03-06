@@ -57,6 +57,17 @@
             text-decoration: dashed;
             display: block;
         }
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            text-align: center;
+            text-emphasis: none;
+            text-decoration: dashed;
+            display: block;
+            border-radius: 15px;
+        }
+
     </style>
 
 <?php } ?>

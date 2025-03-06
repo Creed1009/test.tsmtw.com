@@ -30,7 +30,7 @@ $route['cart']                   = 'cart/index';
 $route['cart/add']               = 'cart/add';
 $route['cart/remove/(:any)']     = 'cart/remove/$1';
 $route['cart/save_to_db']        = 'cart/save_to_db';
-$route['checkout']               = 'cart/checkout';
+$route['checkout']               = 'pages/checkout';
 // 其他
 $route['admin/export/users']     = 'admin/export/users';
 $route['backup_db']              = 'others/backup_db';
