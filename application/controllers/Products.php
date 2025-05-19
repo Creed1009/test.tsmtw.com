@@ -1,9 +1,5 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-/**
- * @property data $data
- * @property view $view
- */
 
 class Products extends Public_Controller {
 

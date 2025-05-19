@@ -107,6 +107,10 @@ class Products_model extends CI_Model {
         return ($query->num_rows() > 0)?$query->result_array():FALSE;
     }
 
+    public function insert($data) {
+        $this->db->insert('products', $data);
+        return $this->db->insert_id();
+    }
     public function getTopCategory()
     
     {
@@ -115,6 +119,16 @@ class Products_model extends CI_Model {
 
         return $query->result_array();
 
+    }
+
+    public function update($id, $data) {
+        $this->db->where('product_id', $id);
+        return $this->db->update('products', $data);
+    }
+
+    public function delete($id) {
+        $this->db->where('product_id', $id);
+        return $this->db->delete('products');
     }
 
     public function getSubCategory()

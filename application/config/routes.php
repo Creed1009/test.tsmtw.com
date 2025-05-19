@@ -31,6 +31,12 @@ $route['cart/add']               = 'cart/add';
 $route['cart/remove/(:any)']     = 'cart/remove/$1';
 $route['cart/save_to_db']        = 'cart/save_to_db';
 $route['checkout']               = 'pages/checkout';
+// $route['api/products']
+$route['api/products']['GET']           = 'api/products_api/index';
+$route['api/products/(:num)']['GET']    = 'api/products_api/show/$1';
+$route['api/products']['POST']          = 'api/products_api/store';
+$route['api/products/(:num)']['PUT']    = 'api/products_api/update/$1';
+$route['api/products/(:num)']['DELETE'] = 'api/products_api/delete/$1';
 // 其他
 $route['admin/export/users']     = 'admin/export/users';
 $route['backup_db']              = 'others/backup_db';

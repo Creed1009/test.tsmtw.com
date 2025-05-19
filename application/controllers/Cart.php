@@ -50,6 +50,8 @@ class Cart extends Public_Controller {
     {
         $this->data['page_title'] = '結帳';
         $this->render('pages/checkout');
+        $this->load->model('Order_model');
+        $order_id = $this->Order_model->create_order($order_data);
 
         // 取得購物車內容
         $cart_items = $this->cart->contents();
@@ -60,14 +62,14 @@ class Cart extends Public_Controller {
         }
         // 準備訂單數據
         $order_data = array(
-            'user_id' => $this->session->userdata['user_id'],
+            'user_id' => $this->session->userdata('user_id'),
             'total_price' => $this->cart->total(),
             'status' => 'pending',
             'created_at' => date('Y-m-d H:i:s'),
         );
 
         // 插入訂單主表(order)
-        $order_id = $this->Order_moder->create_order($order_data);
+        $order_id = $this->Order_model->create_order($order_data);
 
         if (!$order_id) {
             $this->session->set_flashdata('error', '訂單創建失敗');

@@ -4,7 +4,6 @@ class Order_model extends CI_Model {
 
     public function __construct() {
         parent::__construct();
-        $this->load->database();
     }
 
     public function create_order($data)
@@ -15,7 +14,6 @@ class Order_model extends CI_Model {
 
     public function insert_order_item($data)
     {
-        $this->db->insert('order_items', $data);
+        $this->db->insert('order_item', $data);
     }
 }
-
