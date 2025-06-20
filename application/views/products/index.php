@@ -151,7 +151,7 @@
                 <div class="product-card">
                   <!-- Image -->
                   <div class="product-image">
-                    <img src="/assets/uploads/<?php echo $product['product_image1'] ?>" alt="<?php echo $product['product_title'] ?>">
+                    <img src="/assets/uploads/<?php echo $product['product_image'] ?>" alt="<?php echo $product['product_title'] ?>">
                   </div>
                   <!-- Title -->
                   <div class="fw-bold">

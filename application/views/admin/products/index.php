@@ -11,6 +11,13 @@
           echo '<option value='.$data['product_category_id'].'>'.$data['product_category_name'].'</option>';
         } ?>
       </select>
+      
+      <select id="status" class="form-control" onchange="searchFilter()">
+        <option value="1" selected>上架中</option>
+        <option value="0" >已下架</option>
+        <option value="" >全部</option>
+      </select>
+
       <select id="sortBy" class="form-control" onchange="searchFilter()">
         <option value="0">排序</option>
         <option value="asc">升冪</option>

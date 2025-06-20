@@ -27,7 +27,8 @@
       <!-- BEGIN Login Form -->
 
       <?php echo form_open("admin/login"); ?>
-        <img src="/assets/uploads/<?php echo get_setting_general('logo') ?>" class="img-responsive" style="margin: 0 auto;">
+        <img src="/assets/uploads/no-image.jpg" class="img-responsive" style="margin: 0 auto;">
+        <!-- <img src="/assets/uploads/<?php echo get_setting_general('logo') ?>" class="img-responsive" style="margin: 0 auto;"> -->
         <!-- <h3>登入您的帳號</h3> -->
         <hr/>
         <?php if($this->session->flashdata('message')) { ?>

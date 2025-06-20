@@ -79,47 +79,6 @@
     </div>
 </main>
 
-<div class="marquee">
-    <div class="marquee-content">
-        <span> About us content &nbsp; About us content &nbsp; About us content &nbsp; About us content &nbsp;</span>
-        <span> About us content &nbsp; About us content &nbsp; About us content &nbsp; About us content &nbsp;</span>
-        <span> About us content &nbsp; About us content &nbsp; About us content &nbsp; About us content &nbsp;</span>
-        <span> About us content &nbsp; About us content &nbsp; About us content &nbsp; About us content &nbsp;</span>
-        <span> About us content &nbsp; About us content &nbsp; About us content &nbsp; About us content &nbsp;</span>
-        <span> About us content &nbsp; About us content &nbsp; About us content &nbsp; About us content &nbsp;</span>
-        <span> About us content &nbsp; About us content &nbsp; About us content &nbsp; About us content &nbsp;</span>
-        <span> About us content &nbsp; About us content &nbsp; About us content &nbsp; About us content &nbsp;</span>
-    </div>
-</div>
-
-<div class="container">
-    <div class="row align-items-center my-5">
-            <div class="col-md-6">
-                <img src="/assets/images/about_banner_01.jpg" class="img-fluid" alt="Responsive image" height="100%">
-            </div>
-            <div class="col-md-6" style="line-height: 1.3; font-size: 14px;">
-                <h2>太工創作設計</h2>
-                太工創作設計專注於住宅與商業空間的整合設計，<br>
-                堅持以溫度與創意為核心，結合建築本質，<br>
-                為客戶帶來嶄新的空間體驗。<br><br>
-
-                我們擅長將不同材質、結構與功能融合，化解工程難題，<br>
-                創造實用且美觀的設計方案，<br>
-                致力於突破業界的界限。<br><br>
-
-                多年來，憑藉創新的設計理念與專業的執行能力，<br>
-                太工創作設計深受業主與合作夥伴的信賴與推崇，<br>
-                成為眾多粉絲心中的優質品牌。<br><br>
-
-                每一個太工的作品都蘊藏著獨特的創意，量身打造、不可複製，<br>
-                為客戶實現他們的夢想空間。<br><br>
-
-                我們相信設計不僅是功能與美學的結合，<br>
-                更是一種對生活方式的詮釋。期待與您一同創造令人驚豔的作品！
-            </div>
-    </div>
-
-</div>
 
 <div class="container-fluid">
     <div class="row">

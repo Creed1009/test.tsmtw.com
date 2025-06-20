@@ -16,11 +16,11 @@ class Products_model extends CI_Model {
         if(!empty($params['search']['category'])){
             $this->db->where('product_category',$params['search']['category']);
         }
-        // if(!empty($params['search']['status'])){
-        //     $this->db->where('post_status',$params['search']['status']);
-        // } else {
-        //     $this->db->where('post_status', '1');
-        // }
+        if(!empty($params['search']['status'])){
+            $this->db->where('post_status',$params['search']['status']);
+        } else {
+            $this->db->where('post_status', '1');
+        }
         if(!empty($params['search']['sortBy'])){
             $this->db->order_by('product_id',$params['search']['sortBy']);
         } else {

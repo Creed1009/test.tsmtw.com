@@ -1,37 +1,5 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-/**
- * @property products_model $products_model
- * @property ajax_pagination_admin $ajax_pagination_admin
- * @property perPage $perPage
- * @property mysql_model $mysql_model
- * @property ion_auth $ion_auth
- * @property upload $upload
- * @property image_lib $image_lib
- * @property session $session
- * @property db $db
- * @property input $input
- * @property form_validation $form_validation
- * @property render $render
- * @property resizeImage $resizeImage
- * @property server $server
- * @property load $load
- * @property category $category
- * @property top_category $top_category
- * @property sub_category $sub_category
- * @property product_category_parent $product_category_parent
- * @property product_category_name $product_category_name
- * @property product_category_sort $product_category_sort
- * @property creator_id $creator_id
- * @property created_at $created_at
- * @property post_title $post_title
- * @property post_category $post_category
- * @property post_status $post_status
- * @property post_id $post_id
- * @property getSubCategory $getSubCategory
- * @property getTopCategory $getTopCategory
- */
-
 
 class Products extends Admin_Controller {
 

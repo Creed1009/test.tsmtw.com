@@ -43,7 +43,7 @@
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark" aria-label="Third navbar example">
     <div class="container-fluid">
       <a class="navbar-logo-header" href="/">
-        <img src="/assets/images/tacc_header.png" alt="home">
+        <img src="/assets/uploads/no-image.jpg" alt="home">
       </a>
       <div class="collapse navbar-collapse" id="navbarExample03">
         <ul class="navbar-nav me-auto mb-2 mb-sm-0">

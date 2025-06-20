@@ -6,7 +6,8 @@
     <span class="fa fa-bars"></span>
   </button>
   <a class="navbar-brand" href="<?php echo base_url(); ?>">
-    <img src="/assets/uploads/<?php echo get_setting_general('logo'); ?>" class="img-fluid" style="height: 40px;">
+    <img src="/assets/uploads/no-image.jpg" class="img-fluid" style="height: 40px;">
+    <!-- <img src="/assets/uploads/<?php echo get_setting_general('logo'); ?>" class="img-fluid" style="height: 40px;"> -->
   </a>
   <!-- BEGIN Navbar Buttons -->
   <ul class="nav flaty-nav pull-right">
