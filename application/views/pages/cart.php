@@ -19,20 +19,28 @@
                     <h3 class="fw-normal mb-0"><?php echo $page_title?></h3>
                 </div>
 
-                <?php if ($this->cart->total_items() > 0) { ?>
-                    <?php foreach ($this->cart->contents() as $item) { ?>
-                        <div class="card rounded-3 mb-4">
-                            <div class="card-body p-4">
-                                <div class="row d-flex justify-content-between align-items-center">
-                                    <div>
-                                        <?php echo $item['name']; ?>
-                                        <?php echo $item['price']; ?>
-                                        <?php echo $item['qty']; ?>
+                <?php if ($this->cart->total_items() > 0): ?>
+                    <form action="<?= site_url('cart/update') ?>" method="post">
+                        <?php foreach ($this->cart->contents() as $item): ?>
+                            <div class="card rounded-3 mb-4">
+                                <div class="card-body p-4">
+                                    <div class="row d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <p><?= $item['name']; ?></p>
+                                            <p>單價：$<?= $item['price']; ?></p>
+
+                                            
+                                            <label>數量：</label>
+                                            <input type="number" name="qty[<?= $item['rowid']; ?>]" value="<?= $item['qty']; ?>" min="1" style="width:60px;">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    <?php } ?>
+                        <?php endforeach; ?>
+                    </form>
+                    <?php else: ?>
+                        <p>購物車是空的</p>
+                    <?php endif; ?>
 
                     <div class="card mb-4">
                         <div class="card-body p-4 d-flex flex-row">
@@ -54,9 +62,6 @@
                         <button type="button" class="button-return btn-lg ms-3" onclick="goToProducts()">繼續購物</button>
                     </div>
 
-                <?php } else { ?>
-                    <p class="text-center text-muted">Your shopping cart is empty.</p>
-                <?php } ?>
 
             </div>
         </div>

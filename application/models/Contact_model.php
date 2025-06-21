@@ -6,12 +6,17 @@ class Contact_model extends CI_Model {
         $this->db->select('*');
         $this->db->from('contact');
         //filter data by searched keywords
+
         if(!empty($params['search']['keywords'])){
-            $this->db->like('contact_title',$params['search']['keywords']);
+            $this->db->group_start();
+            $this->db->like('contact_name',$params['search']['keywords']);
+            $this->db->or_like('contact_company', $params['search']['keywords']);
+            $this->db->or_like('contact_messages', $params['search']['keywords']);
+            $this->db->group_end();
         }
-        if(!empty($params['search']['category'])){
-            $this->db->where('contact_category',$params['search']['category']);
-        }
+        // if(!empty($params['search']['category'])){
+        //     $this->db->where('contact_category',$params['search']['category']);
+        // }
         // if(!empty($params['search']['status'])){
         //     $this->db->where('contact_status',$params['search']['status']);
         // } else {

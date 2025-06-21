@@ -9,7 +9,7 @@
  * @property post $post
  */
 
-class Contact extends Public_Controller {
+class Contact extends admin_Controller {
 
     public function __construct()
     {
@@ -51,6 +51,6 @@ class Contact extends Public_Controller {
     public function index()
     {
         $this->data['page_title'] = '聯絡我們';
-        $this->render('contact'); 
+        $this->render('admin/contact/index'); 
     }
 }

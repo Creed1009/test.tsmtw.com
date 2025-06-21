@@ -35,19 +35,17 @@ class Contact extends Public_Controller {
 
                 // if($check==true){
                     $data = array(
-                        'contact_user'       => $this->input->post('name'),
-                        'contact_school'     => $this->input->post('school'),
-                        'contact_product_id' => $this->input->post('product_id'),
+                        'contact_name'       => $this->input->post('name'),
+                        'contact_company'    => $this->input->post('company'),
                         'contact_phone'      => $this->input->post('phone'),
                         'contact_email'      => $this->input->post('email'),
-                        'contact_subject'    => $this->input->post('product_title').' - '.$this->input->post('subject'),
-                        'contact_messages'    => $this->input->post('content'),
+                        'contact_messages'   => $this->input->post('content'),
                         'created_at'         => date('Y-m-d H:i:s'),
                     );
                     if($this->mysql_model->_insert('contact',$data)){
                         $this->session->set_flashdata('message', '表單發送成功！非常感謝您的反應與建議。');
                     } else {
-                        $this->session->set_flashdata('message'. '表單發送失敗，請稍後再試。');
+                        $this->session->set_flashdata('message', '表單發送失敗，請稍後再試。');
                     }
                 // }
             // }

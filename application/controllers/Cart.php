@@ -51,7 +51,6 @@ class Cart extends Public_Controller {
         $this->data['page_title'] = '結帳';
         $this->render('pages/checkout');
         $this->load->model('Order_model');
-        $order_id = $this->Order_model->create_order($order_data);
 
         // 取得購物車內容
         $cart_items = $this->cart->contents();
@@ -67,7 +66,7 @@ class Cart extends Public_Controller {
             'status' => 'pending',
             'created_at' => date('Y-m-d H:i:s'),
         );
-
+        
         // 插入訂單主表(order)
         $order_id = $this->Order_model->create_order($order_data);
 
@@ -81,7 +80,7 @@ class Cart extends Public_Controller {
             $order_item = array(
                 'order_id' => $order_id,
                 'product_id' => $item['id'],
-                'quantity' => $item['qty'],
+                'qty' => $item['qty'],  /** quantity */  
                 'price' => $item['price'],
             );
             $this->Order_model->insert_order_item($order_item);
