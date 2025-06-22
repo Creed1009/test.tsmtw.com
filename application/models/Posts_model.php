@@ -31,6 +31,10 @@ class Posts_model extends CI_Model {
         // } else {
         //     $this->db->where('post_status', '1');
         // }
+        if (isset($parame['search']['status']) && $params['search']['status'] !== '0') {
+            $this->db->where('post_status', $params['search']['status']);
+        }
+
         if(!empty($params['search']['sortBy'])){
             $this->db->order_by('post_id',$params['search']['sortBy']);
         } else {

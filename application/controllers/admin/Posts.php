@@ -1,17 +1,5 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-/**
- * @property pages_model $pages_model
- * @property perPage $perPage
- * @property ajax_pagination_admin $ajax_pagination_admin
- * @property input $input
- * @property session $session
- * @property ion_auth $ion_auth
- * @property mysql_model $mysql_model
- * @property db $db
- * @property posts_model $posts_model
- */
-
 class Posts extends Admin_Controller {
 
     public function __construct()
@@ -55,7 +43,7 @@ class Posts extends Admin_Controller {
         $keywords = $this->input->get('keywords');
         $sortBy = $this->input->get('sortBy');
         $category = $this->input->get('category');
-        // $status = $this->input->get('status');
+        $status = $this->input->get('status');
         if(!empty($keywords)){
             $conditions['search']['keywords'] = $keywords;
         }
@@ -152,7 +140,7 @@ class Posts extends Admin_Controller {
             'post_category_id' => $this->input->post('post_category'),
         );
 
-        $this->db->insert('post_category_list', $data);
+        // $this->db->insert('post_category_list', $data);
     }
 
     public function inset_tag($post_id)

@@ -17,7 +17,13 @@ class Posts extends Public_Controller {
 		$this->data['page_title'] = '最新消息';
 
         // $this->data['posts'] = $this->mysql_model->_select('posts');
-        $this->data['posts'] = $this->Posts_model->getPostsByCategory($this->input->get('category'));
+        $this->data['posts'] = $this->Posts_model->getRows(array(
+            'search' => array(
+                'status' => 1, 
+            ),
+            'sortBy' => 'post_id',
+        ));
+        // $this->data['posts'] = $this->Posts_model->getPostsByCategory($this->input->get('category'));
 
 		$this->render('posts/index');
     }
