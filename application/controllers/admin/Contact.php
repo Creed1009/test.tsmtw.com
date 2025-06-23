@@ -50,6 +50,8 @@ class Contact extends admin_Controller {
 
     public function index()
     {
+        $this->load->model('Contact_model');
+        $params['search'] = array();
         $this->data['page_title'] = '聯絡我們';
         $this->render('admin/contact/index'); 
     }

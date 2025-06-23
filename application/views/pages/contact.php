@@ -23,23 +23,23 @@
             <div class="row g-4">
                 <div class="col-sm-6">
                     <label class="form-label fs-base" for="name">姓名</label>
-                    <input class="form-control form-control-lg" type="text" placeholder="你的姓名" required="" id="name">
+                    <input class="form-control form-control-lg" type="text" name="name" placeholder="你的姓名" required="" id="name">
                 </div>
                 <div class="col-sm-6">
                     <label class="form-label fs-base" for="company">公司</label>
-                    <input class="form-control form-control-lg" type="text" placeholder="公司名稱" id="company">
+                    <input class="form-control form-control-lg" type="text" name="company" placeholder="公司名稱" id="company">
                 </div>
                 <div class="col-sm-6">
                     <label class="form-label fs-base" for="email">電子信箱</label>
-                    <input class="form-control form-control-lg" type="email" placeholder="信箱地址" required="" id="email">
+                    <input class="form-control form-control-lg" type="email" name="email" placeholder="信箱地址" required="" id="email">
                 </div>
                 <div class="col-sm-6">
                     <label class="form-label fs-base" for="phone">手機</label>
-                    <input class="form-control form-control-lg" type="text" placeholder="手機號碼" id="phone">
+                    <input class="form-control form-control-lg" type="text" name="phone" placeholder="手機號碼" id="phone">
                 </div>
                 <div class="col-sm-12">
                     <label class="form-label fs-base" for="message">有什麼我們幫忙的嗎?</label>
-                    <textarea class="form-control form-control-lg" rows="6" placeholder="輸入您的訊息..." required="" id="message"></textarea>
+                    <textarea class="form-control form-control-lg" name="content" rows="6" placeholder="輸入您的訊息..." required="" id="message"></textarea>
                 </div>
                 
                 <div class="col-sm-12 text-center pt-4">
