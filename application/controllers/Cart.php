@@ -61,7 +61,8 @@ class Cart extends Public_Controller {
         }
         // 準備訂單數據
         $order_data = array(
-            'user_id' => $this->session->userdata('user_id'),
+            // 'user_id' => $this->session->userdata('user_id'),
+            'user_id' => null,
             'total_price' => $this->cart->total(),
             'status' => 'pending',
             'created_at' => date('Y-m-d H:i:s'),

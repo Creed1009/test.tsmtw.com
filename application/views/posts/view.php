@@ -5,7 +5,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12" style="padding: 50px 20px;">
             <h1><?php echo $page_title; ?></h1>
 
             <article class="post-detail">

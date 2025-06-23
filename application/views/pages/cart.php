@@ -20,57 +20,79 @@
                 </div>
 
                 <?php if ($this->cart->total_items() > 0): ?>
-                    <form action="<?= site_url('cart/update') ?>" method="post">
+                    <form action="<?= site_url('cart/update') ?>" method="post" id="cart-form">
                         <?php foreach ($this->cart->contents() as $item): ?>
-                            <div class="card rounded-3 mb-4">
+                            <div class="card rounded-3 mb-4 cart-item">
                                 <div class="card-body p-4">
                                     <div class="row d-flex justify-content-between align-items-center">
-                                        <div>
+                                        <div class="col-md-8">
                                             <p><?= $item['name']; ?></p>
                                             <p>單價：$<?= $item['price']; ?></p>
 
-                                            
                                             <label>數量：</label>
-                                            <input type="number" name="qty[<?= $item['rowid']; ?>]" value="<?= $item['qty']; ?>" min="1" style="width:60px;">
+                                            <input 
+                                                type="number" 
+                                                name="qty[<?= $item['rowid']; ?>]" 
+                                                class="form-control qty-input d-inline" 
+                                                style="width:80px; display:inline-block;" 
+                                                value="<?= $item['qty']; ?>" 
+                                                min="1"
+                                                data-price="<?= $item['price']; ?>"
+                                            >
+                                        </div>
+                                        <div class="col-md-4 text-end">
+                                            <a href="<?= site_url('cart/remove/' . $item['rowid']); ?>" class="btn btn-sm btn-danger">刪除</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         <?php endforeach; ?>
                     </form>
-                    <?php else: ?>
-                        <p>購物車是空的</p>
-                    <?php endif; ?>
+                <?php else: ?>
+                    <p>購物車是空的</p>
+                <?php endif; ?>
 
-                    <div class="card mb-4">
-                        <div class="card-body p-4 d-flex flex-row">
-                            <div class="form-outline flex-fill">
-                                <input type="text" class="form-control form-control-lg" placeholder="輸入折扣碼" />
-                            </div>
-                            <button type="button" class="btn btn-outline-warning btn-lg ms-3">應用</button>
+                <div class="card mb-4">
+                    <div class="card-body p-4 d-flex flex-row">
+                        <div class="form-outline flex-fill">
+                            <input type="text" class="form-control form-control-lg" placeholder="輸入折扣碼" />
                         </div>
+                        <button type="button" class="btn btn-outline-warning btn-lg ms-3">應用</button>
                     </div>
+                </div>
 
-                    <div class="card">
-                        <div class="card-body text-center">
-                            <h4>Total: $<?php echo number_format($this->cart->total(), 2); ?></h4>
-                            <a href="<?php echo site_url('cart/checkout'); ?>" class="btn btn-warning btn-lg">確認付款</a>
-                        </div>
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h4 id="total-amount">Total: $<?php echo number_format($this->cart->total(), 2); ?></h4>
+                        <a href="<?php echo site_url('cart/checkout'); ?>" class="btn btn-warning btn-lg">確認付款</a>
                     </div>
+                </div>
 
-                    <div class="button-return">
-                        <button type="button" class="button-return btn-lg ms-3" onclick="goToProducts()">繼續購物</button>
-                    </div>
-
-
+                <div class="button-return mt-3 text-center">
+                    <button type="button" class="btn btn-secondary btn-lg" onclick="goToProducts()">繼續購物</button>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-
 <script>
     function goToProducts() {
-        window.location.href ="/products";
+        window.location.href = "/products";
+    }
+
+    // 計算總價
+    document.querySelectorAll('.qty-input').forEach(input => {
+        input.addEventListener('input', updateTotal);
+    });
+
+    function updateTotal() {
+        let total = 0;
+        document.querySelectorAll('.qty-input').forEach(input => {
+            const price = parseFloat(input.dataset.price);
+            const qty = parseInt(input.value) || 0;
+            total += price * qty;
+        });
+        document.getElementById('total-amount').textContent = 'Total: $' + total.toFixed(2);
     }
 </script>
