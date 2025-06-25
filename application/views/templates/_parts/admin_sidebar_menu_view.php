@@ -15,19 +15,21 @@
     
     <?php if($this->ion_auth->in_group('admin') || $this->ion_auth->in_group('president')){ ?>
     <li <?php if ($current == "products" || $current == "users") {echo "class='active'";}?>>
-      <a href="#" class="dropdown-toggle">
-        <i class="fa fa-product-hunt"></i>
+      <a href="/admin/products" >
+        <i class="fa fa-pinterest-p"></i>
         <span>商品管理</span>
-        <b class="arrow fa fa-angle-right"></b>
+        <!-- <b class="arrow fa fa-angle-right"></b> -->
       </a>
-      <ul class="submenu">
-        <?php if($this->ion_auth->in_group('admin')){ ?>
-        <li <?php if ($current == "products") {echo 'class="active"';}?>>
-          <a href="/admin/products">商品列表</a>
-        </li>
-        <?php } ?>
-      </ul>
     </li>
+    <?php } ?>
+
+    <?php if($this->ion_auth->in_group('admin') || $this->ion_auth->in_group('president')){ ?>
+      <li <?php if ($current == "#" || $current == "users") {echo "active";}?>>
+        <a href="#" >
+          <i class="fa fa-snapchat-ghost"></i>
+          <span>訂單管理</span>
+        </a>
+      </li>
     <?php } ?>
 
     <?php if($this->ion_auth->in_group('admin') || $this->ion_auth->in_group('president')){ ?>

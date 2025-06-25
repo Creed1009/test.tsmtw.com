@@ -23,22 +23,6 @@ class About extends Public_Controller {
 		// $this->load->view('about', $this->data);
 	}
 
-	function a()
-	{
-		echo 'a';
-		$this->b();
-	}
-
-	function b()
-	{
-		echo 'b';
-		$this->c();
-	}
-
-	function c()
-	{
-		echo 'c';
-	}
 
 
 }

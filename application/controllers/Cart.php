@@ -59,11 +59,18 @@ class Cart extends Public_Controller {
             $this->session->set_flashdata('error','購物車是空的，無法結帳');
             redirect('cart');
         }
+
+        $total = 0;
+        foreach ($cart_items as $item) {
+            $total += $item['qty'] * $item['price'];
+        }
+
         // 準備訂單數據
         $order_data = array(
             // 'user_id' => $this->session->userdata('user_id'),
             'user_id' => null,
-            'total_price' => $this->cart->total(),
+            'total_price' => $total,
+            // 'total_price' => $this->cart->total(),
             'status' => 'pending',
             'created_at' => date('Y-m-d H:i:s'),
         );
@@ -83,6 +90,7 @@ class Cart extends Public_Controller {
                 'product_id' => $item['id'],
                 'qty' => $item['qty'],  /** quantity */  
                 'price' => $item['price'],
+                'subtotal' => $item['qty'] * $item['price'],
             );
             $this->Order_model->insert_order_item($order_item);
         }

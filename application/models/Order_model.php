@@ -14,6 +14,13 @@ class Order_model extends CI_Model {
 
     public function insert_order_item($data)
     {
-        $this->db->insert('order_item', $data);
+        $this->db->insert('order_item', array(
+        'order_id' => $data['order_id'],
+        'product_id' => $data['product_id'],
+        'qty' => $data['qty'],
+        'price' => $data['price'],
+        'subtotal' => $data['qty'] * $data['price'],
+        'created_at' => date('Y-m-d H:i:s'),
+    ));
     }
 }
