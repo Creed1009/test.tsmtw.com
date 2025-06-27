@@ -14,8 +14,6 @@
         list-style: none;
         margin: 0;
         padding: 0;
-        display: flex;
-        flex-wrap: wrap;
         gap: 10px;
     }
 
@@ -42,25 +40,26 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        display: block;
     }
 
-    .col-12 col-md-4 col-lg-3 {
+    .col-12.col-md-4.col-lg-3 {
         width: 250px;
-        background-color: rgb(253, 252, 162); /* 側邊欄背景色 */
+        background-color: rgb(253, 252, 162); 
         padding: 15px;
         border-right: 1px solid #ddd;
     }
 
-    .col-12 col-md-4 col-lg-3-list {
+    .col-12.col-md-4.col-lg-3-list {
         list-style: none;
         margin: 0;
         padding: 0;
         display: flex;
         flex-direction: column; 
-        gap: 10px; /* 項目之間的間距 */
+        gap: 10px; 
     }
 
-    .col-12 col-md-4 col-lg-3-list li {
+    .col-12.col-md-4.col-lg-3-list li {
         height: 300px;
         padding: 10px;
         background-color:rgb(216, 188, 188);
@@ -144,9 +143,11 @@
           // 計算當前頁應顯示的商品
           $start_index = ($current_page - 1) * $products_per_page;
           $current_products = array_slice($products, $start_index, $products_per_page);
+        
 
           if (!empty($current_products)) {
             foreach ($current_products as $product) { ?>
+            
               <div class="col-6 col-md-4 col-lg-3">
                 <div class="product-card">
                   <!-- Image -->
@@ -163,9 +164,10 @@
                   <div class="product-price">
                     <?php echo $product['product_price'] ?>
                   </div>
+
                 </div>
               </div>
-          <?php  } 
+            <?php  }
           } ?>
         </div>
 
