@@ -5,9 +5,9 @@ class Products_api extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
-        // 載入原本用的 Model
+        
         $this->load->model('Products_model');
-        // 全部回傳 JSON
+        
         header('Content-Type: application/json; charset=utf-8');
     }
 

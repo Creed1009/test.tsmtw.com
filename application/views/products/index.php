@@ -5,7 +5,7 @@
 <style>
     .sidebar {
         width: 250px;
-        background-color: rgb(253, 252, 162); /* 側邊欄背景色 */
+        background-color: rgb(253, 252, 162); 
         padding: 15px;
         border-right: 1px solid #ddd;
     }
@@ -56,7 +56,7 @@
         margin: 0;
         padding: 0;
         display: flex;
-        flex-direction: column; /* 強制垂直排列 */
+        flex-direction: column; 
         gap: 10px; /* 項目之間的間距 */
     }
 
@@ -165,63 +165,64 @@
                   </div>
                 </div>
               </div>
-          <?php }
+          <?php  } 
           } ?>
         </div>
 
-        <!-- Pagination -->
-  <nav class="d-flex justify-content-center mt-4">
-    <ul class="pagination">
-        <!-- 上一頁 -->
-        <?php if ($current_page > 1) { ?>
-            <li class="page-item">
-                <a class="page-link" href="?page=<?= $current_page - 1 ?>">«</a>
-            </li>
-        <?php } ?>
+            <!-- 分頁 -->
+        
+            <!-- <nav class="d-flex justify-content-center mt-4">
+              <ul class="pagination">
+                  
+                  <?php if ($current_page > 1) { ?>
+                      <li class="page-item">
+                          <a class="page-link" href="?page=<?= $current_page - 1 ?>">«</a>
+                      </li>
+                  <?php } ?>
 
-        <!-- 第一頁 -->
-        <?php if ($current_page > 3) { ?>
-            <li class="page-item">
-                <a class="page-link" href="?page=1">1</a>
-            </li>
-            <?php if ($current_page > 4) { ?>
-                <li class="page-item disabled">
-                    <span class="page-link">...</span>
-                </li>
-            <?php } ?>
-        <?php } ?>
+                  
+                  <?php if ($current_page > 3) { ?>
+                      <li class="page-item">
+                          <a class="page-link" href="?page=1">1</a>
+                      </li>
+                      <?php if ($current_page > 4) { ?>
+                          <li class="page-item disabled">
+                              <span class="page-link">...</span>
+                          </li>
+                      <?php } ?>
+                  <?php } ?>
 
-        <!-- 當前頁碼的前後頁 -->
-        <?php
-        $start = max(1, $current_page - 2);
-        $end = min($total_pages, $current_page + 2);
-        for ($i = $start; $i <= $end; $i++) {
-        ?>
-            <li class="page-item <?= ($i == $current_page) ? 'active' : '' ?>">
-                <a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a>
-            </li>
-        <?php } ?>
+                  
+                  <?php
+                  $start = max(1, $current_page - 2);
+                  $end = min($total_pages, $current_page + 2);
+                  for ($i = $start; $i <= $end; $i++) {
+                  ?>
+                      <li class="page-item <?= ($i == $current_page) ? 'active' : '' ?>">
+                          <a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a>
+                      </li>
+                  <?php } ?>
 
-        <!-- 最後一頁 -->
-        <?php if ($current_page < $total_pages - 2) { ?>
-            <?php if ($current_page < $total_pages - 3) { ?>
-                <li class="page-item disabled">
-                    <span class="page-link">...</span>
-                </li>
-            <?php } ?>
-            <li class="page-item">
-                <a class="page-link" href="?page=<?= $total_pages ?>"><?= $total_pages ?></a>
-            </li>
-        <?php } ?>
+                  
+                  <?php if ($current_page < $total_pages - 2) { ?>
+                      <?php if ($current_page < $total_pages - 3) { ?>
+                          <li class="page-item disabled">
+                              <span class="page-link">...</span>
+                          </li>
+                      <?php } ?>
+                      <li class="page-item">
+                          <a class="page-link" href="?page=<?= $total_pages ?>"><?= $total_pages ?></a>
+                      </li>
+                  <?php } ?>
 
-        <!-- 下一頁 -->
-        <?php if ($current_page < $total_pages) { ?>
-            <li class="page-item">
-                <a class="page-link" href="?page=<?= $current_page + 1 ?>">»</a>
-            </li>
-        <?php } ?>
-    </ul>
-</nav>
+                  
+                  <?php if ($current_page < $total_pages) { ?>
+                      <li class="page-item">
+                          <a class="page-link" href="?page=<?= $current_page + 1 ?>">»</a>
+                      </li>
+                  <?php } ?>
+              </ul>
+          </nav> -->
 
       </div>
       
