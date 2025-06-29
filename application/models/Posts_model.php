@@ -31,7 +31,7 @@ class Posts_model extends CI_Model {
         // } else {
         //     $this->db->where('post_status', '1');
         // }
-        if (isset($parame['search']['status']) && $params['search']['status'] !== '0') {
+        if (isset($params['search']['status']) && $params['search']['status'] !== '0') {
             $this->db->where('post_status', $params['search']['status']);
         }
 
