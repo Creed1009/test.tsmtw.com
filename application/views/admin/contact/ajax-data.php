@@ -15,27 +15,29 @@
 <table class="table table-striped table-bordered table-hover" id="data-table">
   <thead>
     <tr class="info">
-      <!-- <th></th> -->
       <th>姓名</th>
+      <th>公司</th>
       <th>電話</th>
       <th>電子郵件</th>
-      <th>主旨</th>
-      <th>狀態</th>
-      <th>操作</th>
+      <th>訊息</th>
+      <!-- <th>狀態</th>
+      <th>操作</th> -->
     </tr>
   </thead>
   <?php if(!empty($contact)): foreach ($contact as $data): ?>
     <tr>
       <!-- <td class="text-center"><input type="checkbox" name="contact_id[]" value="<?php echo $data['contact_id'] ?>"></td> -->
-      <td><?php echo get_user_name($data['contact_user']) ?></td>
+      <!-- <td><?php echo get_user_name($data['contact_name']) ?></td> -->
+      <td><?php echo $data['contact_name'] ?></td>
+      <td><?php echo $data['contact_company'] ?></td>
       <td><?php echo $data['contact_phone'] ?></td>
       <td><?php echo $data['contact_email'] ?></td>
-      <td><?php echo $data['contact_subject'] ?></td>
-      <td><?php echo ($data['contact_is_view']==1)?('<span style="color: blue;">已處理</span>'):('<span style="color: red;">未讀取</span>') ?></td>
+      <td><?php echo $data['contact_messages'] ?></td>
+      <!-- <td><?php echo ($data['contact_is_view']==1)?('<span style="color: blue;">已處理</span>'):('<span style="color: red;">未讀取</span>') ?></td>
       <td>
         <a href="/admin/contact/view/<?php echo $data['contact_id'] ?>" class="btn btn-info btn-sm"><i class="fa fa-eye"></i></a>
         <a href="/admin/contact/delete/<?php echo $data['contact_id'] ?>" class="btn btn-danger btn-sm" onClick="return confirm('您確定要刪除嗎?')"><i class="fa fa-trash-o"></i></a>
-      </td>
+      </td> -->
     </tr>
   <?php endforeach ?>
   <?php else: ?>

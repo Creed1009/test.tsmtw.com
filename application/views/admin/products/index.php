@@ -5,12 +5,12 @@
   <div class="col-md-6">
     <div class="form-inline text-right">
       <input type="text" id="keywords" class="form-control" placeholder="搜尋..." onkeyup="searchFilter()"/>
-      <select id="category" class="form-control" onchange="searchFilter()">
+      <!-- <select id="category" class="form-control" onchange="searchFilter()">
         <option value="0">---選擇分類---</option>
         <?php foreach ($category as $data) {
           echo '<option value='.$data['product_category_id'].'>'.$data['product_category_name'].'</option>';
         } ?>
-      </select>
+      </select> -->
       
       <select id="status" class="form-control" onchange="searchFilter()">
         <option value="1" selected>上架中</option>

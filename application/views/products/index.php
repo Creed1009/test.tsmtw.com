@@ -3,9 +3,18 @@
 <?php } ?>
 
 <style>
+    body {
+      background: #278092; /* fallback */
+      background: -webkit-gradient(linear, left top, left bottom, from(#00475E), to(#007276)); /* Chrome */
+      background: -webkit-linear-gradient(top, #00475E, #007276); /* Newer Chrome */
+      background: -moz-linear-gradient(top, #00475E, #007276); /* Firefox */
+      background: -o-linear-gradient(top, #00475E, #007276); /* Opera */
+      background: linear-gradient(to bottom, #00475E, #007276); /* Standard */
+      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#00475E', endColorstr='#007276'); /* IE */
+    }
     .sidebar {
         width: 250px;
-        background-color: rgb(253, 252, 162); 
+        background-color: rgb(255, 255, 255); 
         padding: 15px;
         border-right: 1px solid #ddd;
     }
@@ -21,19 +30,26 @@
         width: 100%;
         height: 300px;
         padding: 10px;
-        background-color: rgb(216, 188, 188);
+        background-color: rgb(255, 255, 255);
         border: 1px solid rgb(190, 209, 216);
         border-radius: 5px;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
+        transition: transform 0.3s ease;
+    }
+
+    .product-card:hover .product-image img {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
     }
 
     .product-image {
         width: 100%;
         height: 250px;
         overflow: hidden;
+        transition: transform 0.3s ease;
     }
 
     .product-image img {
@@ -45,9 +61,12 @@
 
     .col-12.col-md-4.col-lg-3 {
         width: 250px;
-        background-color: rgb(253, 252, 162); 
+        background-color: rgb(255, 255, 255); 
+        border: 1px solid rgb(190, 209, 216);
+        border-radius: 5px;
         padding: 15px;
         border-right: 1px solid #ddd;
+        
     }
 
     .col-12.col-md-4.col-lg-3-list {
@@ -150,21 +169,20 @@
             
               <div class="col-6 col-md-4 col-lg-3">
                 <div class="product-card">
-                  <!-- Image -->
-                  <div class="product-image">
-                    <img src="/assets/uploads/<?php echo $product['product_image1'] ?>" alt="<?php echo $product['product_title'] ?>">
-                  </div>
-                  <!-- Title -->
-                  <div class="fw-bold">
-                    <a class="text-body" href="<?= base_url('products/' . $product['product_id']) ?>">
+                  <a class="text-body" href="<?= base_url('products/' . $product['product_id']) ?>">
+                    <!-- Image -->
+                    <div class="product-image">
+                      <img src="/assets/uploads/<?php echo $product['product_image1'] ?>" alt="<?php echo $product['product_title'] ?>">
+                    </div>
+                    <!-- Title -->
+                    <div class="fw-bold">
                       <?php echo $product['product_title'] ?>
-                    </a>
-                  </div>
-                  <!-- Price -->
-                  <div class="product-price">
-                    <?php echo $product['product_price'] ?>
-                  </div>
-
+                    </div>
+                    <!-- Price -->
+                    <div class="product-price">
+                      <?php echo $product['product_price'] ?>
+                    </div>
+                  </a>
                 </div>
               </div>
             <?php  }
@@ -173,7 +191,7 @@
 
             <!-- 分頁 -->
         
-            <!-- <nav class="d-flex justify-content-center mt-4">
+            <nav class="d-flex justify-content-center mt-4">
               <ul class="pagination">
                   
                   <?php if ($current_page > 1) { ?>
@@ -224,7 +242,7 @@
                       </li>
                   <?php } ?>
               </ul>
-          </nav> -->
+          </nav>
 
       </div>
       
