@@ -38,6 +38,12 @@
         width: 50px;
         height: 50px;
       }
+      
+      @media (min-width: 576px) {
+        .btn[data-bs-toggle="offcanvas"] {
+          display: none; 
+        }
+      } 
     </style>
 
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark" aria-label="Third navbar example">
@@ -70,6 +76,32 @@
           <input class="form-control" type="text" placeholder="Search" aria-label="Search">
         </form> -->
       </div>
+
+      <!-- sidebar offcanvas -->
+      <button class="btn btn-outline-light d-block d-sm-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobilesidebar" aria-controls="mobilesidebar" style="color: red";>
+        <i class="fas fa-bars"></i>
+      </button>
+
+      
+
+
     </div>
   </nav>
 
+<!-- sidebar -->
+      <div class="offcanvas offcanvas-end" tabindex="1" id="mobilesidebar" aria-labelledby="mobilesidebarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="mobilesidebarLabel">Menu</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="/products">Products</a></li>
+            <li class="nav-item"><a class="nav-link" href="/posts">News</a></li>
+            <li class="nav-item"><a class="nav-link" href="/cart">Cart</a></li>
+          </ul>
+        </div>
+      </div>

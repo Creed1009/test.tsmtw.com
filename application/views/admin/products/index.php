@@ -1,6 +1,7 @@
 <div class="row">
   <div class="col-md-6">
     <a href="/admin/products/create" class="btn btn-primary hidden-print">新增商品</a>
+    <a href="/admin/products/category/index" class="btn btn-primary hidden-print">新增分類</a>
   </div>
   <div class="col-md-6">
     <div class="form-inline text-right">

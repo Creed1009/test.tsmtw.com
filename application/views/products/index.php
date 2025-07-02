@@ -28,8 +28,9 @@
 
     .product-card {
         width: 100%;
-        height: 300px;
+        height: 315px;
         padding: 10px;
+        margin-bottom: 5px;
         background-color: rgb(255, 255, 255);
         border: 1px solid rgb(190, 209, 216);
         border-radius: 5px;
@@ -129,7 +130,7 @@
             <li class="nav-item">
               <!-- Toggle -->
               <a class="nav-link dropdown-toggle fs-lg text-reset border-bottom mb-6" data-bs-toggle="collapse" href="#categoryCollapse">
-                Category
+                分類
               </a>
 
               <!-- Collapse -->
@@ -144,6 +145,7 @@
                   </ul>
                 </div>
               </div>
+              
             </li>                 
           </ul>
         </form>

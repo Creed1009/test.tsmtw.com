@@ -174,6 +174,9 @@ class Products extends Admin_Controller {
             'product_off_the_shelf' => $this->input->post('product_off_the_shelf'),
             // 'product_description_en'  => $this->input->post('product_description_en'),
             'product_price' => $this->input->post('product_price'),
+            'product_activity_price' => $this->input->post('product_activity_price'),
+            'product_sort' => $this-> input->post('product_sort'),
+            'product_status' => $this->input->post('product_status'),
             'updater_id'  => $this->ion_auth->user()->row()->id,
             'updated_at'  => date('Y-m-d H:i:s'),
         );
