@@ -92,7 +92,7 @@
                     </a>
                 </li> -->
                 <li class="nav nav-tabs" style="padding: 15px;">
-                    <a class="category_btn <?php if ($this->uri->segment(1)=="about_us") {echo "active";} ?>" href="/about_us">
+                    <a class="category_btn <?php if ($this->uri->segment(1)=="about") {echo "active";} ?>" href="/about">
                         <p class="text-dark" style="cursor: pointer;">
                             簡介
                         </p>
