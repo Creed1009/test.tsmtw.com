@@ -179,4 +179,14 @@ class Products_model extends CI_Model {
         return $query->result_array();
 
     }
+
+    public function getProductsByCategory($category_id) {
+    
+    if ($category_id == 0) {
+        return $this->db->get('products')->result_array();
+    } else {
+        $this->db->where("FIND_IN_SET(" . intval($category_id) . ", product_category) >", 0);
+        return $this->db->get('products')->result_array();
+        }
+    }
 }

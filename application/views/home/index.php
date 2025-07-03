@@ -19,72 +19,72 @@
 <?php } ?>
 
 <style>
-        .carousel-inner
-        .carousel-item {
-            height: auto;
-            margin-bottom: 50px;
-        }
-        
-        .carousel-item {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-        }
+    .carousel-inner
+    .carousel-item {
+        height: auto;
+        margin-bottom: 50px;
+    }
+    
+    .carousel-item {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
 
-        .carousel-caption {
-            position:absolute;right:15%;
-            bottom:1.25rem;left:15%;
-            padding-top:1.25rem;
-            padding-bottom:1.25rem;
-            color:#fff;text-align:center
-        }
-        .carousel-dark 
-        .carousel-control-next-icon,
-        .carousel-dark 
-        .carousel-control-prev-icon {
-        filter:invert(1) grayscale(100)
-        }
-        .carousel-dark 
-        .carousel-indicators [data-bs-target] {
-        background-color:#000
-        }
-        /* .carousel-dark
-        .carousel-caption {
-        color:#000
-        } */
-        /* @-webkit-keyframes spinner-border { */
-        /* to{transform:rotate(360deg)}
-        } */
-        .row {
-        --bs-gutter-x: 5rem;
-        }        
-        .col-lg-4 h2 
-        .bd-placeholder-img {
-            text-align: center;
-            text-emphasis: none;
-            text-decoration: dashed;
-            display: block;
-        }
+    .carousel-caption {
+        position:absolute;right:15%;
+        bottom:1.25rem;left:15%;
+        padding-top:1.25rem;
+        padding-bottom:1.25rem;
+        color:#fff;text-align:center
+    }
+    .carousel-dark 
+    .carousel-control-next-icon,
+    .carousel-dark 
+    .carousel-control-prev-icon {
+    filter:invert(1) grayscale(100)
+    }
+    .carousel-dark 
+    .carousel-indicators [data-bs-target] {
+    background-color:#000
+    }
+    /* .carousel-dark
+    .carousel-caption {
+    color:#000
+    } */
+    /* @-webkit-keyframes spinner-border { */
+    /* to{transform:rotate(360deg)}
+    } */
+    .row {
+    --bs-gutter-x: 5rem;
+    }        
+    .col-lg-4 h2 
+    .bd-placeholder-img {
+        text-align: center;
+        text-emphasis: none;
+        text-decoration: dashed;
+        display: block;
+    }
 
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            text-align: center;
-            text-emphasis: none;
-            text-decoration: dashed;
-            display: block;
-            border-radius: 15px;
-        }
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        text-align: center;
+        text-emphasis: none;
+        text-decoration: dashed;
+        display: block;
+        border-radius: 15px;
+    }
 
-        @media (max-width: 576px) {
-            .carousel-caption h1 {
-                font-size: 1.5rem;
-            }
-            .carousel-caption p {
-                font-size: 0.9rem;
-                padding:0 10px;
-            }
+    @media (max-width: 576px) {
+        .carousel-caption h1 {
+            font-size: 1.5rem;
         }
+        .carousel-caption p {
+            font-size: 0.9rem;
+            padding:0 10px;
+        }
+    }
 
     </style>
 

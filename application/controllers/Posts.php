@@ -41,20 +41,21 @@ class Posts extends Public_Controller {
     }
 
     public function filter() {
-        $category_id = $this->input->get('category'); // 取得分類 ID
-        if (!$category_id) {
-            show_404();
-        }
+    $category_id = $this->input->get('category');
+    
+    if ($category_id === null || $category_id === '') {
+        show_404();
+    }
 
-        $this->load->model('Posts_model');
-        $data['posts'] = $this->Posts_model->getPostsByCategory($category_id);
+    $this->load->model('Posts_model');
+    $data['posts'] = $this->Posts_model->getPostsByCategory($category_id);
 
         if (empty($data['posts'])) {
             echo "<p>🚫 沒有符合的文章</p>";
         } else {
             foreach ($data['posts'] as $post) {
                 echo "<article class='mb-4'>";
-                echo "<h2>" . $post['post_title'] . "</h2>";
+                echo "<h2>" . htmlspecialchars($post['post_title']) . "</h2>";
                 echo "<p>" . substr(strip_tags($post['post_content']), 0, 300) . "...</p>";
                 echo "<a href='/posts/view/" . $post['post_id'] . "' class='btn btn-primary'>Read More</a>";
                 echo "<hr></article>";
