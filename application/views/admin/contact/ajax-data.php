@@ -15,6 +15,7 @@
 <table class="table table-striped table-bordered table-hover" id="data-table">
   <thead>
     <tr class="info">
+      <th>性別</th>
       <th>姓名</th>
       <th>公司</th>
       <th>電話</th>
@@ -28,6 +29,7 @@
     <tr>
       <!-- <td class="text-center"><input type="checkbox" name="contact_id[]" value="<?php echo $data['contact_id'] ?>"></td> -->
       <!-- <td><?php echo get_user_name($data['contact_name']) ?></td> -->
+      <th><?php echo $data['contact_gender'] ?></th>
       <td><?php echo $data['contact_name'] ?></td>
       <td><?php echo $data['contact_company'] ?></td>
       <td><?php echo $data['contact_phone'] ?></td>
@@ -54,7 +56,7 @@ $(document).ready(function() {
   //   $('#data-table input:checkbox').not(this).prop('checked', this.checked);
   // });
   $('#data-table').DataTable( {
-    // "order": [[ 0, "desc" ]],
+    "order": [[ 1, "asc" ]],
     stateSave: true,
     ordering: false,
     bFilter: false,

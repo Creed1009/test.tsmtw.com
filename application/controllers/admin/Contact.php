@@ -13,6 +13,7 @@ class Contact extends admin_Controller {
 
     public function __construct()
     {
+        
         parent::__construct();
     }
     
@@ -50,8 +51,15 @@ class Contact extends admin_Controller {
 
     public function index()
     {
+        
         $this->load->model('Contact_model');
         $params['search'] = array();
+        $params['order_by'] = [
+            'field' => 'contact_name',
+            'direction' => 'asc'
+        ];
+        
+    
         $this->data['contact'] = $this->Contact_model->getRows($params);
         $this->data['page_title'] = '聯絡我們';
         $this->render('admin/contact/index'); 

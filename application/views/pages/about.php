@@ -73,7 +73,7 @@
 <main role="main">
     <div class="jumbotron jumbotron-fluid text-white banner">
         <div class="container h-100 d-flex flex-column justify-content-center text-center">
-            <h1 class="display-1">ABOUT US</h1>
+            <h1 class="display-1">ABOUT US01</h1>
             <h2 class="display-4">TACC DESIGN STUDIO</h2>
         </div>
     </div>

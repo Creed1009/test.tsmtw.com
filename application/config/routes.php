@@ -26,6 +26,9 @@ $route['posts/filter']           = 'posts/filter';
 $route['posts/view/(:num)']      = 'posts/view/$1'; 
 $route['posts/(:any)']           = 'posts/$1';       
 $route['posts']                  = 'posts/index'; 
+
+// $route['hao']
+$route['hao']                   = 'hao/index';
 //$route['contact']                = 'contact/index';
 $route['contact/insert']         = 'contact/insert';
 $route['cart']                   = 'cart/index';

@@ -10,7 +10,7 @@
     <meta property="og:locale" content="zh_TW" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="<?php echo $page_title; ?> - <?php echo get_setting_general('name') ?>" />
-    <meta property="og:url" content+="<?php echo base_url() ?>" />
+    <meta property="og:url" content="<?php echo base_url() ?>" />
     <meta property="og:site_name" content="<?php echo get_setting_general('name') ?>" />
     <meta property="og:image" content="<?php echo base_url() ?>assets/uploads/<?php echo get_setting_general('logo') ?>" />
     <meta name="twitter:card" content="<?php echo base_url() ?>assets/uploads/<?php echo get_setting_general('logo') ?>" />
@@ -39,11 +39,11 @@
         height: 50px;
       }
       
-      @media (min-width: 576px) {
+      /* @media (min-width: 576px) {
         .btn[data-bs-toggle="offcanvas"] {
           display: none; 
         }
-      } 
+      }  */
     </style>
 
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark" aria-label="Third navbar example">
@@ -71,6 +71,9 @@
           <li class="nav-item">
             <a class="nav-link cart" href="/cart">Cart</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link hao" href="/hao"></a>
+          </li>
         </ul>
         <!-- <form>
           <input class="form-control" type="text" placeholder="Search" aria-label="Search">
@@ -78,7 +81,7 @@
       </div>
 
       <!-- sidebar offcanvas -->
-      <button class="btn btn-outline-light d-block d-sm-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobilesidebar" aria-controls="mobilesidebar" style="color: red";>
+      <button class="btn btn-outline-light d-block d-sm-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobilesidebar" aria-controls="mobilesidebar" style="color: red">
         <i class="fas fa-bars"></i>
       </button>
 
@@ -89,7 +92,7 @@
   </nav>
 
 <!-- sidebar -->
-      <div class="offcanvas offcanvas-end" tabindex="1" id="mobilesidebar" aria-labelledby="mobilesidebarLabel">
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="mobilesidebar" aria-labelledby="mobilesidebarLabel">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title" id="mobilesidebarLabel">Menu</h5>
           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
